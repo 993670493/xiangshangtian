@@ -96,6 +96,9 @@
     color: white;
     font-size: 13px;
 }
+.er{
+    color: red;
+}
 .panduan{
     color: rgba(0,0,0,0);
 }
