@@ -46,6 +46,10 @@ function regrister() {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 let data = JSON.parse(xhr.responseText);
                 console.log(data);
+                if(data.r=='username_is_exist'){
+                    document.querySelector('.utip').innerHTML='账号已存在';
+                    document.querySelector('.utip').classList.add('panduan2');
+                }
                 if (data.r == 'ok') {
                     alert('注册成功');
                     window.location.href = './login.php';
