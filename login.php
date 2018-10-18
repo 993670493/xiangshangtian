@@ -34,22 +34,22 @@
                 <div style="background-color: white; margin: 30px 0;height: 280px;overflow: hidden">
                     <div class="text-center">
                         <form action="">
-                            <div class="row" style="margin-top: 20px ;margin-left: -80px" >
-                                <div class="col-12 h2">用户登录</div>
+                            <div class="row" style="margin-top: 20px ;margin-left: -10px" >
+                                <div class="col-12 h2" style="margin-left: -3px">用户登录</div>
                                 <div class="offset-1 col-2 text-right">
                                     <label for="username">用户名:</label>
                                 </div>
                                 <div class="form-group col-7 text-left">
                                     <input type="text" class="form-control" id="username" name="username">
                                 </div>
-                                <div class="utip">*用户名必填</div>
+                                <div class="utip" style="margin-left: -40px">*用户名必填</div>
                                 <div class="offset-1 col-2 text-right">
                                     <label for="passwd">密码:</label>
                                 </div>
                                 <div class="form-group col-7 text-left">
-                                    <input type="password" class="form-control" id="passwd" name="passwd">
+                                    <input type="password" class="form-control input_len" id="passwd" name="passwd">
                                 </div>
-                                <div class="ptip">*密码必填</div>
+                                <div class="ptip" style="margin-left: -40px">*密码必填</div>
                                 <div class="form-group col-12">
                                     <button class="btn btn-success login" type="button" >登录</button>
                                     <button class="btn btn-success"><a href="./regrister.php">注册</a></button>
