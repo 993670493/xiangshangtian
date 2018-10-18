@@ -105,3 +105,6 @@
 .panduan2{
     color: rgba(255,0,0,1);
 }
+.form-control{
+    width: 250px;
+}
