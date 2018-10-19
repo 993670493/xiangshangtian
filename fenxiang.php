@@ -1,40 +1,28 @@
 <?php
 require('./header.php');
 ?>
-<div style="background-color: #eeeeee;height: 2000px">
-
-<div class="container">
-    <div class="row" >
-        <div id="editor" class="offset-2 col-8">
-
+<div style="background-color: #eeeeee;height:100%">
+    <div class="container">
+        <div class="row">
+            <div class="col-4 offset-5">
+                <h3>最新动态分享</h3>
+            </div>
         </div>
-        <div class="offset-2 col-8">
-            <span style="margin-top: 30px;">说点什么吧</span>
-            <button class="btn btn-success float-right">发表</button>
-        </div>
-        <div class="offset-2 col-8" style="background-color: white">
+    </div>
+<div class="container" id="share_back">
+    <div class="row per_info4">
+        <div>
+            <div class="per_header">
+                <img src="images/1.jpg">
+                <a>用户名</a>
+                <p>当时发送的时间</p>
+            </div>
+            <div class="per_content">
+                10月16日，时至九月重阳，安徽黄山风景区进入秋色最佳观赏期。五颜六色、色彩斑斓的秋叶，点缀在千山万壑之间，犹如美术师打翻了调色板，浓墨重彩，色彩分明。近处怪石虬松，红树点点，五色纷披；远处银白色云海在群峰间起伏，霞光照耀，流光溢彩，美了黄山醉了游客。
+                <img src="images/1.jpg">
+            </div>
             <div>
-                <div style="display: flex">
-                    <div>
-                        <img src="./images/1.jpg" width="60px" height="60px">
-                    </div>
-                    <div>
-                        <span>用户名</span><br>
-                        <span>时间</span>
-                    </div>
-                </div>
-                <div>
-                    这里放文字这里放文字这里放文字这里放文字这里放文字这里放文字这里放文字这里放文字这里放文字这里放文字这里放文字这里放文字这里放文字
-                </div>
-                <div>
-                    <img src="./images/2.jpg" width="200px" height="200px">
-                </div>
-                <form action="">
-                    <div class="input-group mb-3" style="margin-top: 20px">
-                        <input type="text" class="form-control" placeholder="评论">
-                    </div>
-                    <button class="btn btn-success float-right">发表</button>
-                </form>
+                <input type="text" placeholder="评论">
             </div>
         </div>
     </div>
@@ -56,8 +44,6 @@ require('./header.php');
             // $text1.val(html);
             $text1.value = html;
         };
-
-
         editor.create();
     </script>
 <?php
