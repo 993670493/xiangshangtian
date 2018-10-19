@@ -1,5 +1,6 @@
 <?php
 require './common/mysql.php'
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -128,7 +129,7 @@ require './common/mysql.php'
                     <?php
                     if($_SESSION['aid']) {
                         ?>
-                        <li><a href="./mycenter.php" class="nav_f">个人中心</a></li>
+                        <li><a href="./mycenterfirst.php" class="nav_f">个人中心</a></li>
                         <?php
                     }else {
                         ?>

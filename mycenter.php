@@ -73,8 +73,8 @@ require('./header.php');
                             <label for="passwd">性别:</label>
                         </div>
                         <div class="input-group-text">
-                            <input type="radio" aria-label="Radio" value="0">男
-                            <input type="radio" aria-label="Radio" value="1" style="margin-left: 10px">女
+                            <input type="radio" aria-label="Radio" value="0" name="gender" checked>男
+                            <input type="radio" aria-label="Radio" value="1" style="margin-left: 10px" name="gender">女
                         </div>
                         <div class="col-8 text-center">
                             <button class="btn btn-success">保存基本信息</button>
