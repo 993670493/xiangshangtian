@@ -171,3 +171,15 @@
     height: 600px;
     margin-left: 40px;
 }
+.gerenxinxi{
+    float: right;
+    background-color: white;
+    width: 800px;
+    height: 550px;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.input-group-text{
+    background-color: white;
+    border: none;
+}

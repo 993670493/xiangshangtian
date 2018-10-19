@@ -2,7 +2,7 @@
 require('./header.php');
 ?>
     <div style="opacity: 0.5;position: relative;text-align: center">
-        <img src="./images/5.jpg" width="100%" height="100%">
+        <img src="./images/5.jpg" width="100%" height="800px">
     </div>
     <div class="container" style="position: absolute;top: 140px;left: 100px">
         <div class="row">

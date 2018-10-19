@@ -1,8 +1,8 @@
 <?php
 require('./header.php');
 ?>
-    <div style="opacity: 0.5;position: relative;text-align: center">
-        <img src="./images/5.jpg" width="100%" height="100%">
+    <div style="opacity: 0.5;position: relative;text-align: center;">
+        <img src="./images/5.jpg" width="100%" height="800px">
     </div>
     <div class="container" style="position: absolute;top: 140px;left: 100px">
         <div class="row">
@@ -40,7 +40,7 @@ require('./header.php');
                         </div>
                         <div class="form-group col-7 text-left">
                             <label for="header" class="header_aaa">
-                                <img src="./images/1.jpg" width="120px" height="120px">
+                                <img src="<?=$head ? $head : './images/1.jpg'?>" width="120px" height="120px">
                             </label>
                             <input type="file" class="form-control myheader" id="header" name="header" style="display: none">
                             <input type="hidden" name="head" value="<?=$head?>">
