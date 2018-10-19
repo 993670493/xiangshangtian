@@ -1,6 +1,66 @@
 window.onload=function () {
     uploadimg();
+    updateuser();
+    updatemm();
 };
+function updatemm() {
+    let updatemm = document.querySelector('.updatemm');
+    if(!updatemm) return ;
+    updatemm.onclick=function () {
+        let data='';
+        let passwd_new = document.querySelector('input[name="passwd_new"]');
+        let reg_passwd_new = /^\w{6,18}$/;
+        if (!reg_passwd_new.test(passwd_new.value)) {
+            passwd_new.parentNode.nextElementSibling.classList.add('panduan2');
+            passwd_new.focus();
+            return false;
+        } else {
+            passwd_new.parentNode.nextElementSibling.classList.remove('panduan2');
+            data = '&passwd_new=' +passwd_new.value;
+        }
+        let passwd_new2 = document.querySelector('input[name="passwd_new2"]');
+        if (passwd_new2.value!=passwd_new.value) {
+            document.querySelector('.uaip').classList.add('H');
+            passwd_new2.focus();
+            return false;
+        } else {
+            passwd_new2.parentNode.nextElementSibling.classList.remove('panduan2');
+            data += '&passwd_new2=' +passwd_new2.value;
+        }
+        let passwd_last = document.querySelector('input[name="passwd_last"]');
+        let reg_passwd_last = /^\w{6,18}$/;
+        if (!reg_passwd_last.test(passwd_last.value)) {
+            passwd_last.parentNode.nextElementSibling.classList.add('panduan2');
+            passwd_last.focus();
+            return false;
+        } else {
+            passwd_last.parentNode.nextElementSibling.classList.remove('panduan2');
+            data += '&passwd_last=' +passwd_last.value;
+
+        }
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', './updatemm.php');
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send(data);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                let data = JSON.parse(xhr.responseText);
+                console.log(data);
+                if(data.r=='passwd_last'){
+                    document.querySelector('.utip').innerHTML='旧密码不正确';
+                    document.querySelector('.utip').classList.add('H');
+                }
+                if (data.r == 'ok') {
+                    alert('修改成功');
+                    window.location.href = './mycenter.php';
+                } else {
+                    alert('失败，请重新修改');
+                }
+            }
+        }
+    }
+}
+
 function uploadimg() {
     let myheader = document.querySelector('.myheader');
     if(!myheader) return ;
@@ -24,6 +84,73 @@ function uploadimg() {
                 headerimg.src = data.path;
                 // 修改图片地址的值
                 document.querySelector('input[name="head"]').value = data.path;
+            }
+        }
+    }
+}
+
+function updateuser() {
+    let updateuser = document.querySelector('.updateuser');
+    if (!updateuser) return;
+    updateuser.onclick=function () {
+        let data = 'aid=' + document.querySelector('input[name="aid"]').value;
+        let uname = document.querySelector('input[name="uname"]');
+        let reg_uname = /^[\u4e00-\u9fa5]{2,4}$/;
+        if (!reg_uname.test(uname.value)) {
+            uname.parentNode.nextElementSibling.classList.add('er');
+            uname.focus();
+            return false;
+        } else {
+            uname.parentNode.nextElementSibling.classList.remove('er');
+            data += '&uname=' + uname.value;
+        }
+        let username = document.querySelector('input[name="username"]');
+        let reg_username = /^[\u4e00-\u9fa5]{2,4}$/;
+        if (!reg_username.test(username.value)) {
+            username.parentNode.nextElementSibling.classList.add('er');
+            username.focus();
+            return false;
+        } else {
+            username.parentNode.nextElementSibling.classList.remove('er');
+            data += '&username=' + username.value;
+        }
+        let tel = document.querySelector('input[name="tel"]');
+        let reg_tel = /^1[3-9]\d{9}$/;
+        if (!reg_tel.test(tel.value)) {
+            tel.parentNode.nextElementSibling.classList.add('er');
+            tel.focus();
+            return false;
+        } else {
+            tel.parentNode.nextElementSibling.classList.remove('er');
+            data += '&tel=' + tel.value;
+        }
+        let age = document.querySelector('input[name="age"]');
+        let reg_age = /^\d{1,3}$/;
+        if (!reg_age.test(age.value)) {
+            age.parentNode.nextElementSibling.classList.add('er');
+            age.focus();
+            return false;
+        } else {
+            age.parentNode.nextElementSibling.classList.remove('er');
+            data += '&age=' + age.value;
+
+        }
+        data += '&gender=' + document.querySelector('input[name="gender"]:checked').value;
+        data += '&head=' + document.querySelector('input[name="head"]').value;
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', './updateuser.php');
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send(data);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                let data = JSON.parse(xhr.responseText);
+                console.log(data);
+                if (data.r == 'ok') {
+                    alert('保存成功');
+                    window.location.href = './mycenter.php';
+                } else {
+                    alert('失败，请重新修改');
+                }
             }
         }
     }

@@ -108,9 +108,6 @@
 .panduan{
     color: rgba(0,0,0,0);
 }
-.panduan2{
-    color: rgba(255,0,0,1);
-}
 .form-control{
     width: 250px;
 }
@@ -282,3 +279,6 @@
     margin-top: -201px;
     margin-left: 270px;
 }
+.panduan2,.H{
+    color: rgba(255,0,0,1);
+    }

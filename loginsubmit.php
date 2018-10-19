@@ -21,7 +21,7 @@ if(md5($passwd) != $admin['passwd']){
 }
 
 //更新登录次数 最后一次登录时间
-$sql = 'UPDATE admin SET nums = nums + 1, nums = "'.date('Y-m-d H:i:s', time()).'" WHERE aid = '.$admin['aid'].' LIMIT 1';
+$sql = 'UPDATE admin SET nums = (nums + 1), logintimes = "'.date('Y-m-d H:i:s', time()).'" WHERE aid = '.$admin['aid'].' LIMIT 1';
 $mydb->query($sql);
 
 //记录登录状态

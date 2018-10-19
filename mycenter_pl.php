@@ -12,15 +12,15 @@ require('./header.php');
         </div>
         <div class="float-left" style="width: 200px;margin-top: 100px;overflow: hidden">
             <div style="width: 200px;height: 180px;background-color: white;position: relative;overflow: hidden">
-                <div style="margin: 20px 30px 10px 30px;background-color: red">
-                    <img src="./images/1.jpg" width="140px" height="130px">
+                <div style="margin: 20px 30px 10px 30px">
+                    <img src="<?=$head ? $head : './images/1.jpg'?>" width="140px" height="120px">
                 </div>
                 <div class="text-center" style="position: absolute;bottom: 0;margin-left: 30px">
-                    用户名
+                    <?=$username?>
                 </div>
             </div>
             <div style="width: 200px;height: 160px;background-color: white;margin-top: 50px">
-                <div class="text-center h3" style="border-bottom: 1px solid #80b1e3">个人中心</div>
+                <div class="text-center h3" style="border-bottom: 1px solid greenyellow">个人中心</div>
                 <div class="text-center"><a href="./mycenter.php">个人基本信息</a></div>
                 <div class="text-center"><a href="./mycenter_mm.php">修改密码</a></div>
                 <div class="text-center"><a href="./mycenter_fx.php">分享</a></div>

@@ -1,6 +1,13 @@
 <?php
-require './common/mysql.php'
-
+require './common/mysql.php';
+if($_SESSION['aid']){
+    $sql='select * from admin where aid="'.$_SESSION['aid'].'"';
+    $r = $mydb->query($sql);
+    $stu = $r->fetch_array(MYSQLI_ASSOC);
+    foreach ($stu as $key => $value) {
+        $$key = $value;
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,10 +29,10 @@ require './common/mysql.php'
           if($_SESSION['aid']){
               ?>
               <li class="nav-item">
-                  <a class="nav-link header_img" href="#"> <img src="images/1.jpg"></a>
+                  <a class="nav-link header_img" href="#"> <img src="<?=$head ? $head : './images/1.jpg'?>"></a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#">用户名</a>
+                  <a class="nav-link" href="#"><?=$username?></a>
               </li>
               <li class="nav-item">
                   <a class="nav-link" href="#">|</a>

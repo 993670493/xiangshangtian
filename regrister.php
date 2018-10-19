@@ -35,7 +35,7 @@
                 </div>
                 <div class="offset-4 col-1 text-right"><label for="passwd">密码:</label></div>
                 <div class="form-group col-4 text-left">
-                    <input type="text" class="form-control" id="passwd" name="passwd">
+                    <input type="password" class="form-control" id="passwd" name="passwd">
                 </div>
                 <div class="col-2 panduan ">
                     请输入正确格式
