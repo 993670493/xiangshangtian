@@ -5,65 +5,65 @@ require('./header.php');
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <span>µ±Ç°Î»ÖÃ : </span><span>Ê×Ò³</span> > <span>¸öÈËÖÐÐÄ</span>
+                <span>å½“å‰ä½ç½® : </span><span>é¦–é¡µ</span> > <span>ä¸ªäººä¸­å¿ƒ</span>
             </div>
         </div>
         <div class="row per_back1">
                 <div>
                     <img src="./images/1.jpg">
                 </div>
-                <div><p>ÓÃ»§Ãû</p></div>
+                <div><p>ç”¨æˆ·å</p></div>
         </div>
         <div class="per_back2">
             <br>
             <div class="row per_info1">
-                <h4><img src="images/ÄÚÈÝ.png">¸öÈËÐÅÏ¢</h4>
+                <h4><img src="images/å†…å®¹.png">ä¸ªäººä¿¡æ¯</h4>
                 <div class="per_con1">
                     <div style="margin-left: 120px">
-                        <img src="images/ÐÕÃû.png">ÐÕÃû
-                        <a style="margin-left: 200px"><img src="images/ÐÔ±ð.png">ÐÔ±ð</a>
+                        <img src="images/å§“å.png">å§“å
+                        <a style="margin-left: 200px"><img src="images/æ€§åˆ«.png">æ€§åˆ«</a>
                     </div>
                     <br>
                     <div style="margin-left: 120px">
-                        <img src="images/ÄêÁä.png">ÄêÁä
-                        <a style="margin-left: 200px"> <img src="images/µç»°.png">µç»°</a>
+                        <img src="images/å¹´é¾„.png">å¹´é¾„
+                        <a style="margin-left: 200px"> <img src="images/ç”µè¯.png">ç”µè¯</a>
                     </div>
 
                 </div>
             </div>
             <div class="row per_info2">
                 <div class="col-12">
-                    <h4>Hi£¡</h4>
-                    <p>ÕâÀïÊÇ¼ÇÂ¼ÄãµÄÂÃÐÐ¼ÇÒä~</p>
+                    <h4>Hiï¼</h4>
+                    <p>è¿™é‡Œæ˜¯è®°å½•ä½ çš„æ—…è¡Œè®°å¿†~</p>
                 </div>
                 <div class="col-3 per_con2 ">
-                    <img src="images/ÐÅÏ¢.png">
-                    <div>×öÒ»¸öÓÐ¡°ÓÐÍ·ÓÐÁ³¡±µÄÈË
-                        ÉÏ´«Í·Ïñ£¬ÍêÉÆ×ÊÁÏ£¡</div>
-                    <div class="per_con3"><a href="./mycenter.php" style="margin-left: 12px">ÍêÉÆ¸öÈË×ÊÁÏ</a></div>
+                    <img src="images/ä¿¡æ¯.png">
+                    <div>åšä¸€ä¸ªæœ‰â€œæœ‰å¤´æœ‰è„¸â€çš„äºº
+                        ä¸Šä¼ å¤´åƒï¼Œå®Œå–„èµ„æ–™ï¼</div>
+                    <div class="per_con3"><a href="./mycenter.php" style="margin-left: 12px">å®Œå–„ä¸ªäººèµ„æ–™</a></div>
                 </div>
                 <div class="col-3 per_con2 ">
-                    <img src="images/ÅÄÕÕ.png">
-                    <div>Õâ¶ùÇ±·ü×ÅÄÄÐ©ÂÃÐÐ´óÉñ£¿
-                        ËûÃÇ¶¼ÔõÃ´Íæ¶ù£¿</div>
-                    <div class="per_con3"><a href="./mycenter_fx.php" style="margin-left: 12px">·ÖÏíÃÀ¾°ÐÄÇë</a></div>
+                    <img src="images/æ‹ç…§.png">
+                    <div>è¿™å„¿æ½œä¼ç€å“ªäº›æ—…è¡Œå¤§ç¥žï¼Ÿ
+                        ä»–ä»¬éƒ½æ€Žä¹ˆçŽ©å„¿ï¼Ÿ</div>
+                    <div class="per_con3"><a href="./mycenter_fx.php" style="margin-left: 12px">åˆ†äº«ç¾Žæ™¯å¿ƒè¯·</a></div>
                 </div>
                 <div class="col-3 per_con2 ">
-                    <img src="images/ÆÀÂÛ.png">
-                    <div>ÕâÀïÓÐÎå»¨°ËÃÅµÄÆÀÂÛ£¬
-                        ¸÷Â·ÆæÝâÊÂÇé°Ù³ö¡£</div>
-                    <div class="per_con3"><a href="./mycenter_pl.php" style="margin-left: 30px">ÍÂ²ÛµãÆÀ</a></div>
+                    <img src="images/è¯„è®º.png">
+                    <div>è¿™é‡Œæœ‰äº”èŠ±å…«é—¨çš„è¯„è®ºï¼Œ
+                        å„è·¯å¥‡è‘©äº‹æƒ…ç™¾å‡ºã€‚</div>
+                    <div class="per_con3"><a href="./mycenter_pl.php" style="margin-left: 30px">åæ§½ç‚¹è¯„</a></div>
                 </div>
             </div>
             <div class="row per_info3">
                 <div>
                     <div class="per_header">
                         <img src="images/1.jpg">
-                        <a>ÓÃ»§Ãû</a>
-                        <p>µ±Ê±·¢ËÍµÄÊ±¼ä</p>
+                        <a>ç”¨æˆ·å</a>
+                        <p>å½“æ—¶å‘é€çš„æ—¶é—´</p>
                     </div>
                     <div class="per_content">
-                        10ÔÂ16ÈÕ£¬Ê±ÖÁ¾ÅÔÂÖØÑô£¬°²»Õ»ÆÉ½·ç¾°Çø½øÈëÇïÉ«×î¼Ñ¹ÛÉÍÆÚ¡£ÎåÑÕÁùÉ«¡¢É«²Ê°ßìµµÄÇïÒ¶£¬µã×ºÔÚÇ§É½ÍòÛÖÖ®¼ä£¬ÓÌÈçÃÀÊõÊ¦´ò·­ÁËµ÷É«°å£¬Å¨Ä«ÖØ²Ê£¬É«²Ê·ÖÃ÷¡£½ü´¦¹ÖÊ¯ò°ËÉ£¬ºìÊ÷µãµã£¬ÎåÉ«·×Åû£»Ô¶´¦Òø°×É«ÔÆº£ÔÚÈº·å¼äÆð·ü£¬Ï¼¹âÕÕÒ«£¬Á÷¹âÒç²Ê£¬ÃÀÁË»ÆÉ½×íÁËÓÎ¿Í¡£
+                        10æœˆ16æ—¥ï¼Œæ—¶è‡³ä¹æœˆé‡é˜³ï¼Œå®‰å¾½é»„å±±é£Žæ™¯åŒºè¿›å…¥ç§‹è‰²æœ€ä½³è§‚èµæœŸã€‚äº”é¢œå…­è‰²ã€è‰²å½©æ–‘æ–“çš„ç§‹å¶ï¼Œç‚¹ç¼€åœ¨åƒå±±ä¸‡å£‘ä¹‹é—´ï¼ŒçŠ¹å¦‚ç¾Žæœ¯å¸ˆæ‰“ç¿»äº†è°ƒè‰²æ¿ï¼Œæµ“å¢¨é‡å½©ï¼Œè‰²å½©åˆ†æ˜Žã€‚è¿‘å¤„æ€ªçŸ³è™¬æ¾ï¼Œçº¢æ ‘ç‚¹ç‚¹ï¼Œäº”è‰²çº·æŠ«ï¼›è¿œå¤„é“¶ç™½è‰²äº‘æµ·åœ¨ç¾¤å³°é—´èµ·ä¼ï¼Œéœžå…‰ç…§è€€ï¼Œæµå…‰æº¢å½©ï¼Œç¾Žäº†é»„å±±é†‰äº†æ¸¸å®¢ã€‚
                      <img src="images/1.jpg">
                     </div>
                 </div>
