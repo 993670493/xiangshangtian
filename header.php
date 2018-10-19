@@ -124,8 +124,18 @@ require './common/mysql.php'
 
                         </div>
                     </li>
-                    <li><a href="#" class="nav_f">社区分享</a></li>
-                    <li><a href="#" class="nav_f">个人中心</a></li>
+                    <li><a href="./fenxiang.php" class="nav_f">社区分享</a></li>
+                    <?php
+                    if($_SESSION['aid']) {
+                        ?>
+                        <li><a href="./mycenter.php" class="nav_f">个人中心</a></li>
+                        <?php
+                    }else {
+                        ?>
+                        <li><a href="./login.php" class="nav_f">个人中心</a></li>
+                        <?php
+                    }
+                    ?>
                 </ul>
             </div>
         </div>
