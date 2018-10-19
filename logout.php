@@ -4,4 +4,4 @@ isset($_SESSION) || session_start();
 session_destroy();
 
 //跳转到登录页面 或者 首页
-header('Location:./login.php');
+header('Location:./index.php');

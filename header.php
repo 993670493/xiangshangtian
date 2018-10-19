@@ -21,7 +21,7 @@ require './common/mysql.php'
           if($_SESSION['aid']){
               ?>
               <li class="nav-item">
-                  <a class="nav-link" href="#">头像</a>
+                  <a class="nav-link header_img" href="#"> <img src="images/1.jpg"></a>
               </li>
               <li class="nav-item">
                   <a class="nav-link" href="#">用户名</a>

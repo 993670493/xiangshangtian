@@ -20,7 +20,7 @@ require('./header.php');
                 </div>
             </div>
             <div style="width: 200px;height: 160px;background-color: white;margin-top: 50px">
-                <div class="text-center h3" style="border-bottom: 1px solid greenyellow">个人中心</div>
+                <div class="text-center h3" style="border-bottom: 1px solid #80b1e3">个人中心</div>
                 <div class="text-center"><a href="./mycenter.php">个人基本信息</a></div>
                 <div class="text-center"><a href="./mycenter_mm.php">修改密码</a></div>
                 <div class="text-center"><a href="./mycenter_fx.php">分享</a></div>
@@ -29,7 +29,7 @@ require('./header.php');
             </div>
         </div>
         <div class="float-left gerenxinxi">
-            <div style="border-bottom: 1px solid greenyellow;height: 40px" class="h3">
+            <div style="border-bottom: 1px solid #80b1e3;height: 40px" class="h3">
                 个人基本信息
             </div>
             <div class="container" style="margin-top: 30px">
