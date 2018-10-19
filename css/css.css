@@ -40,11 +40,14 @@
     position: absolute;
     width: 200px;
     height: 0;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,1);
     visibility: hidden;
     z-index: 1;
     top:40px;
     transition: all 0.5s 0s linear;
+}
+.hide h5{
+    color: #02994a;
 }
 .header_nav:hover .hide{
     overflow: hidden;
@@ -58,21 +61,24 @@
 .hide1{
     overflow: hidden;
     position: absolute;
-    width: 500px;
+    width: 780px;
     height: 0;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255,255,255,1);
     visibility: hidden;
     z-index: 1;
     top:40px;
     transition: all 0.5s 0s linear;
 }
+.hide1 h5{
+    color:#02994a;
+}
 .header_nav:hover .hide1{
     overflow: hidden;
-    height: 400px;
+    height: 360px;
     visibility: visible;
 }
 .hide1 a{
-    font-size: 12px;
+    font-size: 15px;
     color: black;
 }
 .nav_f:hover{
@@ -107,4 +113,61 @@
 }
 .form-control{
     width: 250px;
+}
+.back_img1 img{
+    width: 84%;
+    opacity: 0.3;
+    position: absolute;
+    height: 115%;
+}
+.back_font h3{
+    margin-left: 400px;
+}
+.back_font img{
+    margin-left: 270px;
+    width: 600px;
+    height: 400px;
+}
+.back_img2 img{
+    width: 84%;
+    opacity: 0.3;
+    position: absolute;
+    height: 170%;
+}
+.back_img3 img{
+    width: 84%;
+    opacity: 0.3;
+    position: absolute;
+    height: 153%;
+}
+.back_img4 img{
+    width: 84%;
+    opacity: 0.3;
+    position: absolute;
+    height: 136%;
+}
+.back_img5 img{
+    width: 84%;
+    opacity: 0.3;
+    position: absolute;
+    height: 167%;
+}
+.strategy h3{
+    margin-left: 500px;
+}
+.strategy img{
+    width: 300px;
+    height: 300px;
+    margin-left: 50px;
+}
+.guide_font{
+      margin-left: 260px;
+  }
+.path_img h3{
+    margin-left: 400px;
+}
+.path_img img{
+    width: 1000px;
+    height: 600px;
+    margin-left: 40px;
 }
