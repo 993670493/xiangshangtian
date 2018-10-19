@@ -10,9 +10,9 @@ require('./header.php');
         </div>
         <div class="row per_back1">
                 <div>
-                    <img src="./images/1.jpg">
+                    <img src="<?=$head ? $head : './images/1.jpg'?>" width="140px" height="120px">
                 </div>
-                <div><p>用户名</p></div>
+                <div><p><?=$username?></p></div>
         </div>
         <div class="per_back2">
             <br>
@@ -20,13 +20,21 @@ require('./header.php');
                 <h4><img src="images/内容.png">个人信息</h4>
                 <div class="per_con1">
                     <div style="margin-left: 120px">
-                        <img src="images/姓名.png">姓名
-                        <a style="margin-left: 200px"><img src="images/性别.png">性别</a>
+                        <img src="images/姓名.png"><?=$uname?>
+                        <?php
+                        $gender = [0 => '男', 1 => '女'];
+                        ?>
+                        <a style="margin-left: 200px">
+                            <img src="images/性别.png"><?=
+                            $gender[$stu['gender']]
+                            ?></a>
                     </div>
                     <br>
                     <div style="margin-left: 120px">
-                        <img src="images/年龄.png">年龄
-                        <a style="margin-left: 200px"> <img src="images/电话.png">电话</a>
+                        <img src="images/电话.png"><?=$tel?>
+                        <a style="margin-left: 135px">
+                            <img src="images/年龄.png"><?=$age?>
+                        </a>
                     </div>
 
                 </div>
@@ -58,8 +66,8 @@ require('./header.php');
             <div class="row per_info3">
                 <div>
                     <div class="per_header">
-                        <img src="images/1.jpg">
-                        <a>用户名</a>
+                        <img src="<?=$head ? $head : './images/1.jpg'?>" width="140px" height="120px">
+                        <a><?=$username?></a>
                         <p>当时发送的时间</p>
                     </div>
                     <div class="per_content">

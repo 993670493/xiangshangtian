@@ -1,87 +1,97 @@
 <?php
 require('./header.php');
 ?>
-    <div style="opacity: 0.5;position: relative;text-align: center;">
-        <img src="./images/5.jpg" width="100%" height="800px">
-    </div>
-    <div class="container" style="position: absolute;top: 140px;left: 100px">
-        <div class="row">
-            <div class="col-12">
-                <span>当前位置 : </span><span>首页</span> > <span>个人中心</span>
-            </div>
-        </div>
-        <div class="float-left" style="width: 200px;margin-top: 100px;overflow: hidden">
-            <div style="width: 200px;height: 180px;background-color: white;position: relative;overflow: hidden">
-                <div style="margin: 20px 30px 10px 30px">
-                    <img src="<?=$head ? $head : './images/1.jpg'?>" width="140px" height="120px">
-                </div>
-                <div class="text-center" style="position: absolute;bottom: 0;margin-left: 30px">
-                    <?=$username?>
+    <div id="background_img">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <span>当前位置 : </span><span>首页</span> > <span>个人中心</span>
                 </div>
             </div>
-            <div style="width: 200px;height: 160px;background-color: white;margin-top: 50px">
-                <div class="text-center h3" style="border-bottom: 1px solid #80b1e3">个人中心</div>
-                <div class="text-center"><a href="./mycenter.php">个人基本信息</a></div>
-                <div class="text-center"><a href="./mycenter_mm.php">修改密码</a></div>
-                <div class="text-center"><a href="./mycenter_fx.php">分享</a></div>
-                <div class="text-center"><a href="./mycenter_fx2.php">我的分享</a></div>
-                <div class="text-center"><a href="./mycenter_pl.php">发表过的评论</a></div>
+            <div class="row my_info">
+                <div>
+                    <img src="./images/1.jpg">
+                </div>
+                <div><p>用户名</p></div>
             </div>
-        </div>
-        <div class="float-left gerenxinxi">
-            <div style="border-bottom: 1px solid greenyellow;height: 40px" class="h3">
-                修改基本信息
+            <div class="row my_info3">
+                <div>
+                    <h4><img src="images/内容.png">我的信息</h4>
+                </div>
+                <div class="my_info3_son"><a href="./mycenter.php" style="margin-left: 10px">个人基本信息</a></div>
+                <br>
+                <div class="my_info3_son"><a href="./mycenter_mm.php" style="margin-left: 27px">修改密码</a></div>
+                <br>
+                <div class="my_info3_son"><a href="./mycenter_fx.php" style="margin-left: 43px">分享</a></div>
+                <br>
+                <div class="my_info3_son"><a href="./mycenter_pl.php" style="margin-left: 27px">我的评论</a></div>
             </div>
-            <div class="container" style="margin-top: 30px">
-                <form action="">
-                    <div class="row">
-                        <input type="hidden" name="aid" value="<?=$aid?>">
-                        <div class="offset-1 col-2 text-right">
-                            <label for="header">头像:</label>
-                        </div>
-                        <div class="form-group col-7 text-left">
-                            <label for="header" class="header_aaa">
-                                <img src="<?=$head ? $head : './images/1.jpg'?>" width="120px" height="120px">
-                            </label>
-                            <input type="file" class="form-control myheader" id="header" name="header" style="display: none">
-                            <input type="hidden" name="head" value="<?=$head?>">
-                        </div>
-                        <div class="offset-1 col-2 text-right">
-                            <label for="uname">姓名:</label>
-                        </div>
-                        <div class="form-group col-7 text-left">
-                            <input type="text" value="<?=$uname?>" class="form-control input_len" id="uname" name="uname">
-                        </div>
-                        <div class="offset-1 col-2 text-right">
-                            <label for="passwd">用户名:</label>
-                        </div>
-                        <div class="form-group col-7 text-left">
-                            <input type="text" value="<?=$username?>" class="form-control input_len" id="username" name="username">
-                        </div>
-                        <div class="offset-1 col-2 text-right">
-                            <label for="tel">电话:</label>
-                        </div>
-                        <div class="form-group col-7 text-left">
-                            <input type="text" value="<?=$tel?>" class="form-control input_len" id="tel" name="tel">
-                        </div>
-                        <div class="offset-1 col-2 text-right">
-                            <label for="age">年龄:</label>
-                        </div>
-                        <div class="form-group col-7 text-left">
-                            <input type="text" value="<?=$age?>" class="form-control input_len" id="age" name="age">
-                        </div>
-                        <div class="offset-1 col-2 text-right">
-                            <label for="gender">性别:</label>
-                        </div>
-                        <div class="input-group-text">
-                            <input type="radio" aria-label="Radio" value="0" name="gender" <?=$gender==0?' checked':''?>>男
-                            <input type="radio" aria-label="Radio" value="1" name="gender" <?=$gender==1?' checked':''?> style="margin-left: 10px">女
-                        </div>
-                        <div class="col-8 text-center">
-                            <button class="btn btn-success updateuser" type="button">保存基本信息</button>
-                        </div>
+            <div class="my_info1">
+                <div class="row">
+                    <div>
+                        <h5>个人基本信息</h5>
                     </div>
-                </form>
+                </div>
+                <div class="border_line"></div>
+                <br>
+                <div class="row my_info2">
+                    <form action="">
+                        <div class="row">
+                            <input type="hidden" name="aid" value="<?= $aid ?>">
+                            <div class="offset-1 col-2 text-right">
+                                <label for="header">头像:</label>
+                            </div>
+                            <div class="form-group col-7 text-left">
+                                <label for="header" class="header_aaa">
+                                    <img src="<?= $head ? $head : './images/1.jpg' ?>" width="120px" height="120px">
+                                </label>
+                                <input type="file" class="form-control myheader" id="header" name="header"
+                                       style="display: none">
+                                <input type="hidden" name="head" value="<?= $head ?>">
+                            </div>
+                            <div class="offset-1 col-2 text-right">
+                                <label for="uname">姓名:</label>
+                            </div>
+                            <div class="form-group col-7 text-left">
+                                <input type="text" value="<?= $uname ?>" class="form-control input_len" id="uname"
+                                       name="uname">
+                            </div>
+                            <div class="offset-1 col-2 text-right">
+                                <label for="passwd">用户名:</label>
+                            </div>
+                            <div class="form-group col-7 text-left">
+                                <input type="text" value="<?= $username ?>" class="form-control input_len" id="username"
+                                       name="username">
+                            </div>
+                            <div class="offset-1 col-2 text-right">
+                                <label for="tel">电话:</label>
+                            </div>
+                            <div class="form-group col-7 text-left">
+                                <input type="text" value="<?= $tel ?>" class="form-control input_len" id="tel"
+                                       name="tel">
+                            </div>
+                            <div class="offset-1 col-2 text-right">
+                                <label for="age">年龄:</label>
+                            </div>
+                            <div class="form-group col-7 text-left">
+                                <input type="text" value="<?= $age ?>" class="form-control input_len" id="age"
+                                       name="age">
+                            </div>
+                            <div class="offset-1 col-2 text-right">
+                                <label for="gender">性别:</label>
+                            </div>
+                            <div class="input-group-text">
+                                <input type="radio" aria-label="Radio" value="0"
+                                       name="gender" <?= $gender == 0 ? ' checked' : '' ?>>男
+                                <input type="radio" aria-label="Radio" value="1"
+                                       name="gender" <?= $gender == 1 ? ' checked' : '' ?> style="margin-left: 10px">女
+                            </div>
+                            <div class="col-8 text-center">
+                                <button class="btn btn-success updateuser text-center" type="button" style="margin: 0">保存基本信息</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

@@ -25,7 +25,6 @@ require('./header.php');
               <div class="my_info3_son"><a href="./mycenter_fx.php" style="margin-left: 43px">分享</a></div>
                       <br>
               <div class="my_info3_son"><a href="./mycenter_pl.php" style="margin-left: 27px">我的评论</a></div>
-
           </div>
             <div class="my_info1">
                 <div class="row">
@@ -58,7 +57,7 @@ require('./header.php');
         // 创建一个编辑器
         var editor = new E('#editor');
         // 配置服务器端地址
-        editor.customConfig.uploadImgServer = './editorupload.php?from=pc';
+        editor.customConfig.uploadImgServer = './upload.php?from=pc';
         //服务器端接收的文件名称
         editor.customConfig.uploadFileName = 'images[]';
         //内容同步
@@ -70,6 +69,7 @@ require('./header.php');
         };
         editor.create();
     </script>
+    <script src="./js/mycenter.js"></script>
 <?php
 require('./footer.php');
 ?>
