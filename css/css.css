@@ -248,9 +248,8 @@
     border-radius: 50%;
 }
 .per_content img{
-    width: 600px;
-    height: 400px;
-    margin-left: 80px;
+    width: 400px;
+    height: 300px;
 }
 #background_img{
     background-image: url("../images/5.jpg");
@@ -371,4 +370,7 @@ margin-left: 70px;
     color: darkgray;
     text-decoration: none;
     font-size: 14px;
+}
+.comment_share1 a{
+  color: white;
 }

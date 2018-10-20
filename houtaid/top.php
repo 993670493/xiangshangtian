@@ -1,10 +1,12 @@
+<?php
+require './common/mysql.php'
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>后台主界面</title>
     <link rel="stylesheet" href="./layui/css/layui.css">
-    <link rel="stylesheet" href="./css/css.css">
 </head>
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
@@ -22,7 +24,7 @@
                     <dd><a href="">安全设置</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item"><a href="">退了</a></li>
+            <li class="layui-nav-item"><a href="./logout.php">退了</a></li>
         </ul>
     </div>
     <div class="layui-side layui-bg-black">

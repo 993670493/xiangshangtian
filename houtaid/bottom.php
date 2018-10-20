@@ -4,6 +4,6 @@
 </div>
 </div>
 <script src="./layui/layui.all.js"></script>
-<script src="./js/js.js"></script>
+
 </body>
 </html>

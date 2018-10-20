@@ -1,6 +1,5 @@
 <?php
 require('./header.php');
-
 ?>
     <div id="background_img">
         <div class="container">

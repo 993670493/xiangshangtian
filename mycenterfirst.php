@@ -74,6 +74,12 @@ require('./header.php');
                         10月16日，时至九月重阳，安徽黄山风景区进入秋色最佳观赏期。五颜六色、色彩斑斓的秋叶，点缀在千山万壑之间，犹如美术师打翻了调色板，浓墨重彩，色彩分明。近处怪石虬松，红树点点，五色纷披；远处银白色云海在群峰间起伏，霞光照耀，流光溢彩，美了黄山醉了游客。
                      <img src="images/1.jpg">
                     </div>
+                    <br>
+                    <div class="per_comment">
+                        <div class='share_time'>发表动态时间</div>
+                        <div class='comment_share1'>
+                            <span><a href=''>删除动态</a></span></div>
+                    </div>
                 </div>
             </div>
             </div>

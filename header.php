@@ -58,6 +58,9 @@ if($_SESSION['aid']){
             <li class="nav-item">
                 <a class="nav-link" href="#">网上预定</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./houtaid/login.php">后台管理</a>
+            </li>
         </ul>
     </div>
 </nav>
