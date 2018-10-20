@@ -1,12 +1,21 @@
 <?php
 require('./header.php');
-    $sql='select b.head,b.username,a.title,a.texts,a.addtime from share as a,admin as b where a.aid=b.aid ORDER by fid desc';
+    $sql='select b.head,b.username,a.title,a.texts,a.addtime,a.fid from share as a,admin as b where a.aid=b.aid ORDER by fid desc';
     $r = $mydb->query($sql);
     $stu = $r->fetch_array(MYSQLI_ASSOC);
     foreach ($stu as $key => $value) {
         $$key = $value;
     }
-?>
+    $sql_fx='select d.head,f.text,d.username,f.addtime,f.pid,f.aid from comment as f,admin as d where f.aid=d.aid ORDER by addtime desc';
+    $gsd=$mydb->query($sql_fx);
+    $stu_fx=$gsd->fetch_all(MYSQLI_ASSOC);
+    foreach ($stu_fx as $k =>$v){
+        $pid=$v['pid'];
+        $sql_fx='select d.head,f.text_hf,d.username,f.addtime from reply as f,admin as d where f.aid=d.aid and f.pid='.$pid;
+        $gsd=$mydb->query($sql_fx);
+        $stu_fx[$k]['replay']=$gsd->fetch_all(MYSQLI_ASSOC);
+    }
+    ?>
 <div style="background-color: #eeeeee;height:100%">
     <div class="container">
         <div class="row">
@@ -37,22 +46,40 @@ require('./header.php');
                 <div class='comment_share'><button class='btn btn-success ' data-toggle='modal' data-target='#myModal' >评论</button>
                 </div>
             </div>
-            <div>
-                <hr>
+            <div id="allcom">
+                <?php
+                foreach ($stu_fx as $key => $stu){
+                    echo '
+                    <hr>
                 <br>
                 <div class="media">
                     <div class="media-left">
-                        <img class="media-object" src="images/1.jpg" alt="...">
+                        <img class="media-object" src="'.$stu['head'].'" alt="">
                     </div>
                     <div class="media-body">
-                        <p class="media-heading">小明</p>
-                        <p>有来过，666666。</p>
-                        <p>4楼&nbsp;&nbsp;2017-08-08&nbsp;&nbsp;23:15发表</p>
+                        <h4 class="media-heading">'.$stu['username'].'</h4>
+                        <p>'.$stu['text'].'</p>
+                        <p>'.$stu['addtime'].'发表</p>
                     </div>
                 </div>
-                <div class='comment_com'><button class='btn btn-success hf' data-toggle='modal' data-target='#mM' >回复</button>
+                <input type="hidden" name="last_aid" value="'.$stu['aid'].'">
+                <input type="hidden" name="pid" value="'.$stu['pid'].'">
+                <button class="btn btn-success  replay comment_com" data-aid="'.$stu['aid'].'" data-pid="'.$stu['pid'].'" type="button" data-toggle=\'modal\' data-target=\'#mM\' >回复</button>
+                
+                    ';
+                    foreach ($stu['replay'] as $k=>$w){
+                        echo '
+                        <div>
+                    <div class="media-left">
+                        <img class="media-object" src="'.$w['head'].'" alt="">
+                        &nbsp;&nbsp;'.$w['username'].'&nbsp;回复&nbsp;'.$stu['username'].'：&nbsp;'.$w['text_hf'].'
+                    '.$w['addtime'].'
+                    </div>
                 </div>
-                <hr>
+                   ';
+                    }
+                }
+                ?>
             </div>
         </div>
     </div>
@@ -65,38 +92,36 @@ require('./header.php');
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     <h4 class="modal-title" id="myModalLabel">评论</h4>
                 </div>
-                <textarea class="modal-body pldt" cols="80px"></textarea>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary" id="tjpl">提交评论</button>
-                </div>
+                <form action="">
+                    <textarea class="modal-body pldt text" id="text" cols="64px"></textarea>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary add_pl" id="tjpl">提交评论</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
     <!--模态框结束-->
-
     <!-- 回复模态框（Modal） -->
     <div class="modal fade" id="mM" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     <h4 class="modal-title" id="myModalLabel">回复</h4>
                 </div>
-                <textarea class="modal-body hfpl" cols="80px"></textarea>
+                <textarea class="modal-body hfpl " id="text_hf" cols="80px"></textarea>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary" id="tjhf">提交回复</button>
+                    <button type="button" class="btn btn-primary add_huifu" id="tjhf">提交回复</button>
                 </div>
             </div>
         </div>
     </div>
     <!--模态框结束-->
 </div>
-
     <script src="http://unpkg.com/wangeditor/release/wangEditor.min.js"></script>
     <script>
         var E = window.wangEditor;
@@ -115,6 +140,7 @@ require('./header.php');
         };
         editor.create();
     </script>
+    <script src="./js/mycenter.js"></script>
 <?php
 require('./footer.php');
 ?>

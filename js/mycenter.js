@@ -3,7 +3,84 @@ window.onload=function () {
     updateuser();
     updatemm();
     add_fx();
+    add_pl();
+    add_huifu();
 };
+function add_huifu() {
+
+    let add_huifu=document.querySelector('.add_huifu');
+    if(!add_huifu) return ;
+    //  找到的回复按钮
+    let aid = 0, pid = 0;
+    let allcom= document.querySelector('#allcom');
+    allcom.onclick =function (e) {
+        console.log(1);
+        if(e.target.classList.contains('replay')){
+            aid= e.target.dataset.aid;
+            pid= e.target.dataset.pid;
+            console.log(aid,pid);
+        }
+    }
+
+    add_huifu.onclick=function () {
+        if(aid==""){
+            alert("请登录");
+            window.location.href = './login.php';
+            return;
+        }
+        let data='';
+        data += '&last_aid=' + aid;
+        data += '&pid=' + pid;
+        data += '&text_hf=' + document.querySelector('#text_hf').value;
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', './add_hf.php');
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send(data);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                let data = JSON.parse(xhr.responseText);
+                console.log(data);
+                if (data.r == 'ok') {
+                    alert('回复成功');
+                    window.location.href = './fenxiang.php';
+                } else {
+                    alert('回复失败');
+                }
+            }
+        }
+    }
+}
+function add_pl() {
+    let add_pl = document.querySelector('.add_pl');
+    if(!add_pl) return ;
+    add_pl.onclick=function () {
+        let aid=document.querySelector('input[name="aid"]').value;
+        if(aid==""){
+            alert("请登录");
+            window.location.href = './login.php';
+            return;
+        }
+        let data='';
+        data += '&fid=' + document.querySelector('input[name="fid"]').value;
+        data += '&text=' + document.querySelector('#text').value;
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', './add_pl.php');
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send(data);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                let data = JSON.parse(xhr.responseText);
+                console.log(data);
+                if (data.r == 'ok') {
+                    alert('评论成功');
+                    window.location.href = './fenxiang.php';
+                } else {
+                    alert('评论失败');
+                }
+            }
+        }
+    }
+}
 function add_fx() {
     let add_fx = document.querySelector('.add_fx');
     if(!add_fx) return ;
