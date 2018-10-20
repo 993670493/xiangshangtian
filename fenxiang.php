@@ -1,5 +1,11 @@
 <?php
 require('./header.php');
+    $sql='select b.head,b.username,a.title,a.texts,a.addtime from share as a,admin as b where a.aid=b.aid ORDER by fid desc';
+    $r = $mydb->query($sql);
+    $stu = $r->fetch_array(MYSQLI_ASSOC);
+    foreach ($stu as $key => $value) {
+        $$key = $value;
+    }
 ?>
 <div style="background-color: #eeeeee;height:100%">
     <div class="container">
@@ -13,23 +19,22 @@ require('./header.php');
     <div class="row per_info4">
         <div>
             <div class="per_header">
-                <img src="images/1.jpg">
+                <img src="<?= $head ? $head : './images/1.jpg' ?>" width="120px" height="120px">
             </div>
             <div class="per_name">
-              <h4>用户名</h4>
+              <h4><?=$username?></h4>
             </div>
             <div class="per_title text-center">
-                <p>标题</p>
+                <p><?=$title?></p>
             </div>
             <div class="per_content">
-                10月16日，时至九月重阳，安徽黄山风景区进入秋色最佳观赏期。五颜六色、色彩斑斓的秋叶，点缀在千山万壑之间，犹如美术师打翻了调色板，浓墨重彩，色彩分明。近处怪石虬松，红树点点，五色纷披；远处银白色云海在群峰间起伏，霞光照耀，流光溢彩，美了黄山醉了游客。
-                <img src="images/1.jpg">
+                <?=$texts?>
             </div>
             <br>
             <div class="per_comment">
-                <div class='share_time'>发表动态时间</div>
+                <div class='share_time'><?=$addtime?></div>
                 <div class='comment_share'><button class='btn btn-success ' data-toggle='modal' data-target='#myModal' >评论</button>
-                    <span><a href=''>删除动态</a></span></div>
+                </div>
             </div>
             <div>
                 <hr>

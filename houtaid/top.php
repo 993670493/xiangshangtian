@@ -44,20 +44,6 @@ require './common/mysql.php'
                         <dd><a href="javascript:">评论列表</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item">
-                    <a href="javascript:">景区概况</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:">概况列表</a></dd>
-                        <dd><a href="javascript:">概况添加</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item">
-                    <a href="javascript:">旅游攻略</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:">攻略列表</a></dd>
-                        <dd><a href="javascript:">攻略添加</a></dd>
-                    </dl>
-                </li>
             </ul>
         </div>
     </div>
