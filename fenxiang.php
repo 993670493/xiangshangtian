@@ -96,6 +96,7 @@ require('./header.php');
     </div>
     <!--模态框结束-->
 </div>
+
     <script src="http://unpkg.com/wangeditor/release/wangEditor.min.js"></script>
     <script>
         var E = window.wangEditor;
