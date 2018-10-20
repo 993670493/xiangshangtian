@@ -1,5 +1,6 @@
 <?php
 require('./header.php');
+
 ?>
     <div id="background_img">
         <div class="container">
@@ -8,11 +9,12 @@ require('./header.php');
                     <span>当前位置 : </span><span>首页</span> > <span>个人中心</span>
                 </div>
             </div>
-            <div class="row my_info" >
+            <div class="row my_info">
                 <div>
-                    <img src="./images/1.jpg">
+                    <img src="<?=$head ? $head : './images/1.jpg'?>" width="140px" height="120px">
+                    <input type="hidden" name="head" value="<?= $head ?>">
                 </div>
-                <div><p>用户名</p></div>
+                <div><p><?=$username?></p></div>
             </div>
           <div class="row my_info3">
               <div>
@@ -37,13 +39,15 @@ require('./header.php');
                 <div class="row my_info2">
                     <form action="">
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="请输入标题" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" name="title" class="form-control" placeholder="请输入标题" aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                         <div id="editor">
+                            <p><?=$text?></p>
                         </div>
+                        <textarea name="text" id="text" cols="30" rows="10" class="hide"><?=$text?></textarea>
                         <div>
                             <br>
-                            <button class="btn">发表</button>
+                            <button class="btn add_fx" type="button">分享</button>
                         </div>
                     </form>
                 </div>
@@ -61,7 +65,7 @@ require('./header.php');
         //服务器端接收的文件名称
         editor.customConfig.uploadFileName = 'images[]';
         //内容同步
-        var $text1 = document.querySelector('#info');
+        var $text1 = document.querySelector('#text');
         editor.customConfig.onchange = function (html) {
             // 监控变化，同步更新到 textarea
             // $text1.val(html);

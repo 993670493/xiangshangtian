@@ -351,6 +351,9 @@ margin-left: 70px;
 .my_info3_son a{
     color: white;
 }
+#editor{
+    width: 730px;
+}
 .media-object{
     width: 50px;
     height: 50px;

@@ -2,7 +2,34 @@ window.onload=function () {
     uploadimg();
     updateuser();
     updatemm();
+    add_fx();
 };
+function add_fx() {
+    let add_fx = document.querySelector('.add_fx');
+    if(!add_fx) return ;
+    add_fx.onclick=function () {
+        let data='';
+        data += '&title=' + document.querySelector('input[name="title"]').value;
+        data += '&text=' + document.querySelector('#text').value;
+        data += '&head=' + document.querySelector('input[name="head"]').value;
+        let xhr = new XMLHttpRequest();
+        xhr.open('POST', './add_fx.php');
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send(data);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                let data = JSON.parse(xhr.responseText);
+                console.log(data);
+                if (data.r == 'ok') {
+                    alert('分享成功');
+                    window.location.href = './mycenter_fx.php';
+                } else {
+                    alert('分享失败');
+                }
+            }
+        }
+    }
+}
 function updatemm() {
     let updatemm = document.querySelector('.updatemm');
     if(!updatemm) return ;

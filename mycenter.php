@@ -1,5 +1,6 @@
 <?php
 require('./header.php');
+
 ?>
     <div id="background_img">
         <div class="container">
@@ -10,9 +11,9 @@ require('./header.php');
             </div>
             <div class="row my_info">
                 <div>
-                    <img src="./images/1.jpg">
+                    <img src="<?=$head ? $head : './images/1.jpg'?>" width="140px" height="120px">
                 </div>
-                <div><p>用户名</p></div>
+                <div><p><?=$username?></p></div>
             </div>
             <div class="row my_info3">
                 <div>

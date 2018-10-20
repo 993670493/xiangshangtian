@@ -8,11 +8,11 @@ require('./header.php');
                     <span>当前位置 : </span><span>首页</span> > <span>个人中心</span>
                 </div>
             </div>
-            <div class="row my_info" >
+            <div class="row my_info">
                 <div>
-                    <img src="./images/1.jpg">
+                    <img src="<?=$head ? $head : './images/1.jpg'?>" width="140px" height="120px">
                 </div>
-                <div><p>用户名</p></div>
+                <div><p><?=$username?></p></div>
             </div>
             <div class="row my_info3">
                 <div>
