@@ -12,7 +12,7 @@ require('./header.php');
                 <div>
                     <img src="<?=$head ? $head : './images/1.jpg'?>" width="140px" height="120px">
                 </div>
-                <div><p><?=$username?></p></div>
+                <div class="per_username"><p><?=$username?></p></div>
         </div>
         <div class="per_back2">
             <br>
@@ -65,21 +65,42 @@ require('./header.php');
             </div>
             <div class="row per_info3">
                 <div>
+                    <br>
                     <div class="per_header">
                         <img src="<?=$head ? $head : './images/1.jpg'?>" width="140px" height="120px">
-                        <a><?=$username?></a>
-                        <p>当时发送的时间</p>
+                        <a style="font-size: 20px;font-weight: bolder"><?=$username?></a>
+                    </div>
+                    <div class="per_title text-center">
+                        <p>标题</p>
                     </div>
                     <div class="per_content">
                         10月16日，时至九月重阳，安徽黄山风景区进入秋色最佳观赏期。五颜六色、色彩斑斓的秋叶，点缀在千山万壑之间，犹如美术师打翻了调色板，浓墨重彩，色彩分明。近处怪石虬松，红树点点，五色纷披；远处银白色云海在群峰间起伏，霞光照耀，流光溢彩，美了黄山醉了游客。
-                     <img src="images/1.jpg">
                     </div>
                     <br>
                     <div class="per_comment">
                         <div class='share_time'>发表动态时间</div>
-                        <div class='comment_share1'>
-                            <span><a href=''>删除动态</a></span></div>
+                        <div class='del_share'>
+                           <a href="#"><img src="images/删除.png"></a>
+                        </div>
                     </div>
+                </div>
+                <div>
+                    <hr>
+                    <br>
+                    <div class="media">
+                        <div class="media-left">
+                            <img class="media-object" src="images/1.jpg" alt="...">
+                        </div>
+                        <div class="media-body">
+                            <p class="media-heading">小明</p>
+                            <p>有来过，666666。</p>
+                            <p>4楼&nbsp;&nbsp;2017-08-08&nbsp;&nbsp;23:15发表</p>
+                        </div>
+                    </div>
+                    <div class='comment_com'><button class='btn btn-success hf' data-toggle='modal' data-target='#mM' >回复</button>
+                        <span><a href=''>删除评论</a></span>
+                    </div>
+                    <hr>
                 </div>
             </div>
             </div>

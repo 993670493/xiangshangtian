@@ -243,9 +243,8 @@
     margin-top: 20px;
 }
 .per_header img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width:100px;
+    height:100px;
 }
 .per_content img{
     width: 400px;
@@ -268,9 +267,12 @@
     margin-left: 30px;
     margin-top: 10px;
 }
-.per_back1 p{
-    margin-left: 80px;
+.per_username{
+    width: 199px;
+    height: 26px;
+    text-align: center;
 }
+
 .per_back2{
     background-color: white;
     width: 800px;
@@ -354,9 +356,8 @@ margin-left: 70px;
     width: 730px;
 }
 .media-object{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 100px;
+    height: 100px;
 }
 .comment_share{
     margin-left: 620px;
@@ -374,3 +375,21 @@ margin-left: 70px;
 .comment_share1 a{
   color: white;
 }
+.per_title{
+    font-size: 18px;
+}
+.per_content{
+    font-size: 14px;
+}
+.media-heading{
+    font-size: 20px;
+    font-weight: bold;
+}
+.del_share{
+    margin-left: 700px;
+}
+.del_share a img:hover{
+    background-color:#80abdd;
+}
+
+

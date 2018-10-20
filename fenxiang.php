@@ -18,9 +18,10 @@ require('./header.php');
 <div class="container" id="share_back">
     <div class="row per_info4">
         <div>
+            <br>
             <div class="per_header">
                 <img src="<?= $head ? $head : './images/1.jpg' ?>" width="120px" height="120px">
-            </div>
+                <a style="font-size: 20px;font-weight: bolder"><?=$username?></a>
             <div class="per_name">
               <h4><?=$username?></h4>
             </div>
@@ -44,13 +45,12 @@ require('./header.php');
                         <img class="media-object" src="images/1.jpg" alt="...">
                     </div>
                     <div class="media-body">
-                        <h4 class="media-heading">小明</h4>
+                        <p class="media-heading">小明</p>
                         <p>有来过，666666。</p>
                         <p>4楼&nbsp;&nbsp;2017-08-08&nbsp;&nbsp;23:15发表</p>
                     </div>
                 </div>
                 <div class='comment_com'><button class='btn btn-success hf' data-toggle='modal' data-target='#mM' >回复</button>
-                    <span><a href=''>删除评论</a></span>
                 </div>
                 <hr>
             </div>

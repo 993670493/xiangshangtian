@@ -19,6 +19,7 @@ window.onload=function () {
                     document.querySelector('.ptip').classList.add('er');
                 }
                 if(data.r=='ok'){
+                    alert('登录成功！');
                     window.location.href = './index.php';
                 }
             }
