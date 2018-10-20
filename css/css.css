@@ -351,4 +351,21 @@ margin-left: 70px;
 .my_info3_son a{
     color: white;
 }
-
+.media-object{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.comment_share{
+    margin-left: 620px;
+}
+.comment_share a{
+    color: darkgray;
+    text-decoration: none;
+    font-size: 14px;
+}
+.comment_com a{
+    color: darkgray;
+    text-decoration: none;
+    font-size: 14px;
+}

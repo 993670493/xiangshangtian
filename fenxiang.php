@@ -14,19 +14,82 @@ require('./header.php');
         <div>
             <div class="per_header">
                 <img src="images/1.jpg">
-                <a>用户名</a>
-                <p>当时发送的时间</p>
+            </div>
+            <div class="per_name">
+              <h4>用户名</h4>
+            </div>
+            <div class="per_title text-center">
+                <p>标题</p>
             </div>
             <div class="per_content">
                 10月16日，时至九月重阳，安徽黄山风景区进入秋色最佳观赏期。五颜六色、色彩斑斓的秋叶，点缀在千山万壑之间，犹如美术师打翻了调色板，浓墨重彩，色彩分明。近处怪石虬松，红树点点，五色纷披；远处银白色云海在群峰间起伏，霞光照耀，流光溢彩，美了黄山醉了游客。
                 <img src="images/1.jpg">
             </div>
+            <br>
+            <div class="per_comment">
+                <div class='share_time'>发表动态时间</div>
+                <div class='comment_share'><button class='btn btn-success ' data-toggle='modal' data-target='#myModal' >评论</button>
+                    <span><a href=''>删除动态</a></span></div>
+            </div>
             <div>
-                <input type="text" placeholder="评论">
+                <hr>
+                <br>
+                <div class="media">
+                    <div class="media-left">
+                        <img class="media-object" src="images/1.jpg" alt="...">
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">小明</h4>
+                        <p>有来过，666666。</p>
+                        <p>4楼&nbsp;&nbsp;2017-08-08&nbsp;&nbsp;23:15发表</p>
+                    </div>
+                </div>
+                <div class='comment_com'><button class='btn btn-success hf' data-toggle='modal' data-target='#mM' >回复</button>
+                    <span><a href=''>删除评论</a></span>
+                </div>
+                <hr>
             </div>
         </div>
     </div>
 </div>
+    <div class="text-center">
+        <button class="btn btn-default btn-block">查看更多</button>
+    </div>
+    <!-- 评论模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">评论</h4>
+                </div>
+                <textarea class="modal-body pldt" cols="80px"></textarea>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="tjpl">提交评论</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--模态框结束-->
+
+    <!-- 回复模态框（Modal） -->
+    <div class="modal fade" id="mM" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel">回复</h4>
+                </div>
+                <textarea class="modal-body hfpl" cols="80px"></textarea>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="tjhf">提交回复</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--模态框结束-->
 </div>
     <script src="http://unpkg.com/wangeditor/release/wangEditor.min.js"></script>
     <script>
