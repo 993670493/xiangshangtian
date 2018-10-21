@@ -99,7 +99,7 @@ function add_fx() {
                 console.log(data);
                 if (data.r == 'ok') {
                     alert('分享成功');
-                    window.location.href = './mycenter_fx.php';
+                    window.location.href = './fenxiang.php';
                 } else {
                     alert('分享失败');
                 }
@@ -251,7 +251,7 @@ function updateuser() {
                 console.log(data);
                 if (data.r == 'ok') {
                     alert('保存成功');
-                    window.location.href = './mycenter.php';
+                    window.location.href = './mycenterfirst.php';
                 } else {
                     alert('失败，请重新修改');
                 }

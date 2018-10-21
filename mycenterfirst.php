@@ -20,22 +20,18 @@ require('./header.php');
             <div class="row per_info1">
                 <h4><img src="images/内容.png">个人信息</h4>
                 <div class="per_con1">
-                    <div style="margin-left: 120px">
-                        <img src="images/姓名.png"><?=$uname?>
+                    <div  class="col-4" style="margin-left: 80px;height: 60px">
+                       <div class="per_one"><img src="images/姓名.png"><?=$uname?></div>
+                        <br>
                         <?php
                         $gender = [0 => '男', 1 => '女'];
                         ?>
-                        <a style="margin-left: 200px">
-                            <img src="images/性别.png"><?=
-                            $gender[$stu['gender']]
-                            ?></a>
+                        <div class="per_one"><img src="images/性别.png"><?= $gender[$stu['gender']] ?></div>
                     </div>
-                    <br>
-                    <div style="margin-left: 120px">
-                        <img src="images/电话.png"><?=$tel?>
-                        <a style="margin-left: 135px">
-                            <img src="images/年龄.png"><?=$age?>
-                        </a>
+                    <div class="col-4"  style="margin-left: 370px;margin-top: -61px;height: 60px">
+                        <div class="per_one"> <img src="images/电话.png"><?=$tel?></div>
+                        <br>
+                        <div class="per_one"><img src="images/年龄.png"><?=$age?></div>
                     </div>
 
                 </div>
@@ -95,11 +91,12 @@ require('./header.php');
                         <div class="media-body">
                             <p class="media-heading">小明</p>
                             <p>有来过，666666。</p>
-                            <p>4楼&nbsp;&nbsp;2017-08-08&nbsp;&nbsp;23:15发表</p>
+                            <a>4楼&nbsp;&nbsp;2017-08-08&nbsp;&nbsp;23:15发表</a>
+                            <button class='btn btn-success hf comment_com' data-toggle='modal' data-target='#mM' >回复</button>
                         </div>
                     </div>
-                    <div class='comment_com'><button class='btn btn-success hf' data-toggle='modal' data-target='#mM' >回复</button>
-                        <span><a href=''>删除评论</a></span>
+                    <div class='del_share'>
+                        <a href="#"><img src="images/删除.png"></a>
                     </div>
                     <hr>
                 </div>

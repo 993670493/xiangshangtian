@@ -16,11 +16,11 @@ require('./header.php');
         $stu_fx[$k]['replay']=$gsd->fetch_all(MYSQLI_ASSOC);
     }
     ?>
-<div style="background-color: #eeeeee;height:100%">
+<div id="background_imgfx">
     <div class="container">
         <div class="row">
             <div class="col-4 offset-5">
-                <h3>最新动态分享</h3>
+                <h3 style="color:white;">最新动态分享</h3>
             </div>
         </div>
     </div>
@@ -59,13 +59,12 @@ require('./header.php');
                     <div class="media-body">
                         <h4 class="media-heading">'.$stu['username'].'</h4>
                         <p>'.$stu['text'].'</p>
-                        <p>'.$stu['addtime'].'发表</p>
-                    </div>
-                </div>
-                <input type="hidden" name="last_aid" value="'.$stu['aid'].'">
+                        <a>'.$stu['addtime'].'发表</a>
+                        <input type="hidden" name="last_aid" value="'.$stu['aid'].'">
                 <input type="hidden" name="pid" value="'.$stu['pid'].'">
                 <button class="btn btn-success  replay comment_com" data-aid="'.$stu['aid'].'" data-pid="'.$stu['pid'].'" type="button" data-toggle=\'modal\' data-target=\'#mM\' >回复</button>
-                
+                    </div>
+                </div>
                     ';
                     foreach ($stu['replay'] as $k=>$w){
                         echo '
@@ -73,7 +72,7 @@ require('./header.php');
                     <div class="media-left">
                         <img class="media-object" src="'.$w['head'].'" alt="">
                         &nbsp;&nbsp;'.$w['username'].'&nbsp;回复&nbsp;'.$stu['username'].'：&nbsp;'.$w['text_hf'].'
-                    '.$w['addtime'].'
+                    <p></p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$w['addtime'].'
                     </div>
                 </div>
                    ';
@@ -121,6 +120,7 @@ require('./header.php');
         </div>
     </div>
     <!--模态框结束-->
+</div>
 </div>
     <script src="http://unpkg.com/wangeditor/release/wangEditor.min.js"></script>
     <script>

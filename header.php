@@ -56,7 +56,7 @@ if($_SESSION['aid']){
           }
           ?>
             <li class="nav-item">
-                <a class="nav-link" href="#">网上预定</a>
+                <a class="nav-link" href="http://piao.ctrip.com/ticket/dest/t64844.html?allianceid=4897&sid=1458162&ouid=pxp64844">网上预定</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="./houtaid/login.php">后台管理</a>

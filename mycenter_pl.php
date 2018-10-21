@@ -37,7 +37,23 @@ require('./header.php');
                 <br>
                 <div class="row my_info2">
                     <div style="margin-bottom: 500px">
-
+                        <div>
+                            <br>
+                            <div class="media">
+                                <div class="media-left">
+                                    <img class="media-object" src="images/1.jpg" alt="...">
+                                </div>
+                                <div class="media-body">
+                                    <p class="media-heading">小明</p>
+                                    <p>有来过，666666。</p>
+                                    <a>4楼&nbsp;&nbsp;2017-08-08&nbsp;&nbsp;23:15发表</a>
+                                </div>
+                            </div>
+                            <div class='del_share'>
+                                <a href="#"><img src="images/删除.png"></a>
+                            </div>
+                            <hr>
+                        </div>
                     </div>
                 </div>
             </div>
