@@ -243,8 +243,9 @@
     margin-top: 20px;
 }
 .per_header img{
-    width:100px;
-    height:100px;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
 }
 .per_content img{
     width: 400px;
@@ -356,8 +357,9 @@ margin-left: 70px;
     width: 730px;
 }
 .media-object{
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 .comment_share{
     margin-left: 620px;
