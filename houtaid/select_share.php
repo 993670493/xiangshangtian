@@ -36,6 +36,7 @@ $students = $r->fetch_all(MYSQLI_ASSOC);
             </tbody>
         </table>
     </div>
+    <script src="./js/selec_share.js"></script>
 <?php
 require('./bottom.php')
 ?>
