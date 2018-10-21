@@ -7,27 +7,27 @@ window.onload=function () {
     add_huifu();
 };
 function add_huifu() {
-
     let add_huifu=document.querySelector('.add_huifu');
     if(!add_huifu) return ;
     //  找到的回复按钮
     let aid = 0, pid = 0;
     let allcom= document.querySelector('#allcom');
     allcom.onclick =function (e) {
+        let ccc=document.querySelector('input[name="aid"]').value;
+        if(ccc==""){
+            alert("请登录");
+            window.location.href = './login.php';
+            return;
+        }
         console.log(1);
         if(e.target.classList.contains('replay')){
             aid= e.target.dataset.aid;
             pid= e.target.dataset.pid;
             console.log(aid,pid);
         }
-    }
+    };
 
     add_huifu.onclick=function () {
-        if(aid==""){
-            alert("请登录");
-            window.location.href = './login.php';
-            return;
-        }
         let data='';
         data += '&last_aid=' + aid;
         data += '&pid=' + pid;

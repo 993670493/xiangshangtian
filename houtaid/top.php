@@ -1,5 +1,13 @@
 <?php
-require './common/mysql.php'
+require './common/mysql.php';
+if($_SESSION['aid']){
+    $sql='select * from admin where aid="'.$_SESSION['aid'].'" and important =1';
+    $r = $mydb->query($sql);
+    $stu = $r->fetch_array(MYSQLI_ASSOC);
+    foreach ($stu as $key => $value) {
+        $$key = $value;
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,8 +24,8 @@ require './common/mysql.php'
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
                 <a href="javascript:">
-                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-                    上帝
+                    <img src="<?=$head?>" class="layui-nav-img">
+                    <?=$username?>
                 </a>
                 <dl class="layui-nav-child">
                     <dd><a href="">基本资料</a></dd>
@@ -34,14 +42,15 @@ require './common/mysql.php'
                 <li class="layui-nav-item layui-nav-itemed">
                     <a class="" href="javascript:">用户管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:">用户列表</a></dd>
+                        <dd><a href="./select_admin.php">用户列表</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
                     <a href="javascript:">用户发布的内容管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:">分享列表</a></dd>
-                        <dd><a href="javascript:">评论列表</a></dd>
+                        <dd><a href="./select_share.php">分享列表</a></dd>
+                        <dd><a href="./select_comment.php">评论列表</a></dd>
+                        <dd><a href="./select_replay.php">回复列表</a></dd>
                     </dl>
                 </li>
             </ul>
