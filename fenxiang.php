@@ -6,7 +6,7 @@ require('./header.php');
     foreach ($stu as $key => $value) {
         $$key = $value;
     }
-    $sql_fx='select d.head,f.text,d.username,f.addtime,f.pid,f.aid from comment as f,admin as d where f.aid=d.aid ORDER by addtime desc';
+    $sql_fx='select d.head,f.text,d.username,f.addtime,f.pid,f.aid from comment as f,admin as d where f.aid=d.aid and f.fid="'.$fid.'"  ORDER by addtime desc';
     $gsd=$mydb->query($sql_fx);
     $stu_fx=$gsd->fetch_all(MYSQLI_ASSOC);
     foreach ($stu_fx as $k =>$v){
@@ -29,11 +29,9 @@ require('./header.php');
         <div>
             <br>
             <div class="per_header">
+                <input type="hidden" name="aid" value="<?= $aid ?>">
                 <img src="<?= $head ? $head : './images/1.jpg' ?>" width="120px" height="120px">
                 <a style="font-size: 20px;font-weight: bolder"><?=$username?></a>
-            <div class="per_name">
-              <h4><?=$username?></h4>
-            </div>
             <div class="per_title text-center">
                 <p><?=$title?></p>
             </div>
@@ -43,6 +41,8 @@ require('./header.php');
             <br>
             <div class="per_comment">
                 <div class='share_time'><?=$addtime?></div>
+                <input type="hidden" name="aid" value="<?= $aid ?>">
+                <input type="hidden" name="fid" value="<?= $fid ?>">
                 <div class='comment_share'><button class='btn btn-success ' data-toggle='modal' data-target='#myModal' >评论</button>
                 </div>
             </div>
