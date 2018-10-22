@@ -8,6 +8,7 @@ window.onload=function () {
 };
 function add_huifu() {
     let add_huifu=document.querySelector('.add_huifu');
+    let fid=document.querySelector('input[name="fid"]').value;
     if(!add_huifu) return ;
     //  找到的回复按钮
     let aid = 0, pid = 0;
@@ -19,11 +20,9 @@ function add_huifu() {
             window.location.href = './login.php';
             return;
         }
-        console.log(1);
         if(e.target.classList.contains('replay')){
             aid= e.target.dataset.aid;
             pid= e.target.dataset.pid;
-            console.log(aid,pid);
         }
     };
 
@@ -42,7 +41,7 @@ function add_huifu() {
                 console.log(data);
                 if (data.r == 'ok') {
                     alert('回复成功');
-                    window.location.href = './fenxiang.php';
+                    window.location.href = './fenxiang.php?fid='+fid;
                 } else {
                     alert('回复失败');
                 }
@@ -61,6 +60,8 @@ function add_pl() {
             return;
         }
         let data='';
+        let fid=document.querySelector('input[name="fid"]').value;
+        console.log(fid);
         data += '&fid=' + document.querySelector('input[name="fid"]').value;
         data += '&text=' + document.querySelector('#text').value;
         let xhr = new XMLHttpRequest();
@@ -73,7 +74,7 @@ function add_pl() {
                 console.log(data);
                 if (data.r == 'ok') {
                     alert('评论成功');
-                    window.location.href = './fenxiang.php';
+                    window.location.href = './fenxiang.php?fid='+fid;
                 } else {
                     alert('评论失败');
                 }
