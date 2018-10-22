@@ -1,3 +1,396 @@
+
+.logo img{
+    width: 80px;
+    height: 80px;
+    margin-left: 200px;
+}
+.nav_b{
+    font-size: 35px;
+    color: #02994a !important;
+}
+#navbarSupportedContent{
+    margin-left: 300px;
+}
+.nav_top{
+    background-color:#02994a ;
+}
+.nav_f{
+    color: white;
+}
+.nav_son{
+    background-color: #02994a;
+}
+.nav_back ul{
+    width:1000px;
+    height:30px;
+    list-style-type: none;
+    margin-left: 10px;
+}
+.nav_back ul li{
+    float: left;
+    text-align: center;
+    width: 190px;
+    height:30px;
+    line-height: 50px;
+    text-decoration: none;
+    position: relative;
+}
+.hide{
+    overflow: hidden;
+    position: absolute;
+    width: 200px;
+    height: 0;
+    background: rgba(255,255,255,1);
+    visibility: hidden;
+    z-index: 999999;
+    top:40px;
+    transition: all 0.5s 0s linear;
+}
+.hide h5{
+    color: #02994a;
+}
+.header_nav:hover .hide{
+    overflow: hidden;
+    height: 350px;
+    visibility: visible;
+}
+.nav_img{
+    width: 50px;
+    height: 50px;
+}
+.hide1{
+    overflow: hidden;
+    position: absolute;
+    width: 780px;
+    height: 0;
+    background: rgba(255,255,255,1);
+    visibility: hidden;
+    z-index: 999999;
+    top:40px;
+    transition: all 0.5s 0s linear;
+}
+.hide1 h5{
+    color:#02994a;
+}
+.header_nav:hover .hide1{
+    overflow: hidden;
+    height: 360px;
+    visibility: visible;
+}
+.hide1 a{
+    font-size: 15px;
+    color: black;
+}
+.nav_f:hover{
+    color: white;
+}
+.nav_a{
+    color: black;
+}
+.footer_top{
+    height: 5px;
+    background-color:white;
+}
+
+.footer{
+    background-color:#02994a ;
+}
+.footer a{
+    color: white;
+}
+.footer p{
+    color: white;
+    font-size: 13px;
+}
+.er{
+    color: red;
+}
+.panduan{
+    color: rgba(0,0,0,0);
+}
+.form-control{
+    width: 250px;
+}
+.back_img1 img{
+    width: 84%;
+    opacity: 0.3;
+    position: absolute;
+    height: 115%;
+}
+.back_font h3{
+    margin-left: 400px;
+}
+.back_font img{
+    margin-left: 270px;
+    width: 600px;
+    height: 400px;
+}
+.back_img2 img{
+    width: 84%;
+    opacity: 0.3;
+    position: absolute;
+    height: 170%;
+}
+.back_img3 img{
+    width: 84%;
+    opacity: 0.3;
+    position: absolute;
+    height: 153%;
+}
+.back_img4 img{
+    width: 84%;
+    opacity: 0.3;
+    position: absolute;
+    height: 136%;
+}
+.back_img5 img{
+    width: 84%;
+    opacity: 0.3;
+    position: absolute;
+    height: 167%;
+}
+.strategy h3{
+    margin-left: 500px;
+}
+.strategy img{
+    width: 300px;
+    height: 300px;
+    margin-left: 50px;
+}
+.guide_font{
+    margin-left: 260px;
+}
+.path_img h3{
+    margin-left: 400px;
+}
+.path_img img{
+    width: 1000px;
+    height: 600px;
+    margin-left: 40px;
+}
+.gerenxinxi{
+    float: right;
+    background-color: white;
+    width: 800px;
+    height: auto;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.input-group-text{
+    background-color: white;
+    border: none;
+}
+.header_img img{
+    width: 50px;
+    height: 50px;
+    margin-left: 0;
+    margin-top: -10px;
+}
+.per_info1{
+    background: #c3d8fc;
+    width: 760px;
+    height: 130px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 50px;
+}
+.per_info1 h4{
+    margin-left: 60px;
+}
+.per_con1{
+    width: 600px;
+    height: 84px;
+    margin-left:88px;
+    margin-top: -18px;
+}
+.per_con1 img{
+    width: 18px;
+    height: 18px;
+}
+
+.per_info2{
+    background: #c3d8fc;
+    width: 760px;
+    height: 300px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.per_con2{
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    margin-left: 47px;
+}
+.per_con2 img{
+    margin-left: 53px;
+    margin-top: 10px;
+}
+.per_con3{
+    width: 120px;
+    height: 30px;
+    background-color: #80ABDD;
+    border-radius: 30px;
+    margin-left: 17px;
+}
+.per_con3 a{
+    color: white;
+    text-decoration: none;
+}
+.per_info3{
+    background: #c3d8fc;
+    width: 760px;
+    height: auto;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.per_header img{
+    width:50px;
+    height:50px;
+
+}
+.per_content img{
+    width: 400px;
+    height: 300px;
+}
+.per_back1{
+    width:200px;
+    height: 180px;
+    background-color: white;
+    margin-top: 43px;
+}
+.per_back1 img{
+    width:140px;
+    height:140px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.per_username{
+    width: 199px;
+    height: 26px;
+    text-align: center;
+}
+
+.per_back2{
+    background-color: white;
+    width: 800px;
+    height: auto;
+    margin-top: -201px;
+    margin-left: 270px;
+}
+.aaa{
+    color:white;
+}
+.panduan2,.H{
+    color: rgba(255,0,0,1);
+}
+#share_back{
+    width: 800px;
+    height: auto;
+    background-color: white;
+}
+.per_info4{
+    width: 760px;
+    height: auto;
+    margin-left: 20px;
+}
+.my_info{
+    width:200px;
+    height: 180px;
+    background-color: white;
+    margin-top: 43px;
+}
+.my_info img{
+    width:140px;
+    height:140px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.my_info1 h5{
+    color:#84a5de;
+    margin-left: 30px;
+}
+.my_info1{
+    background-color: white;
+    width: 800px;
+    height: auto;
+    margin-top: -466px;
+    margin-left: 290px;
+}
+.border_line{
+    border-bottom: solid 3px #c3d8fc;
+}
+.my_info2{
+    margin-left: 36px;
+}
+.my_info2 button{
+    color:white;
+    background-color: #84a5de;
+    margin-left: 652px;
+}
+.my_info p{
+    margin-left: 70px;
+}
+.my_info3{
+    width:200px;
+    height: 250px;
+    background-color: white;
+    margin-top: 43px;
+}
+.my_info3 h4{
+    margin-left: 27px;
+}
+.my_info3_son{
+    width: 120px;
+    height: 30px;
+    border-radius: 20px;
+    background-color:#80ABDD;
+    margin-left: 40px;
+}
+.my_info3_son a{
+    color: white;
+}
+#editor{
+    width: 730px;
+}
+.media-object{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.comment_share{
+    margin-left: 620px;
+}
+.comment_share a{
+    color: darkgray;
+    text-decoration: none;
+    font-size: 14px;
+}
+.comment_share1 a{
+    color: white;
+}
+.per_title{
+    font-size: 18px;
+}
+.per_content{
+    font-size: 14px;
+}
+.media-heading{
+    font-size: 20px;
+    font-weight: bold;
+}
+.del_share{
+    margin-left: 700px;
+}
+.del_share a img:hover{
+    background-color:#80abdd;
+}
+.per_one{
+    width: 130px;
+    height: 24px;
+}
+
+
+
 .fx_img{
     display: flex;
     width: 200px;
