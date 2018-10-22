@@ -20,24 +20,23 @@ require('./header.php');
     }
     ?>
 <div id="background_imgfx">
-    <div class="container">
-        <div class="row">
-            <div class="col-4 offset-5">
-                <h3 style="color:white;">最新动态分享</h3>
+    <div class="container-fluid share_top">
+        <br>
+        <div class="container">
+            <div class="col-10 offset-1">
+                <div class="per_headertop">
+                    <input type="hidden" name="aid" value="<?= $aid ?>">
+                    <img src="<?= $head ? $head : './images/1.jpg' ?>" width="120px" height="120px">
+                    <a style="font-size: 22px;color: white"><?=$username?></a>
+                    <div class="sharelist_title text-center">
+                        <p><?=$title?></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 <div class="container" id="share_back">
     <div class="row per_info4">
-        <div>
-            <br>
-            <div class="per_header">
-                <input type="hidden" name="aid" value="<?= $aid ?>">
-                <img src="<?= $head ? $head : './images/1.jpg' ?>" width="120px" height="120px">
-                <a style="font-size: 20px;font-weight: bolder"><?=$username?></a>
-            <div class="per_title text-center">
-                <p><?=$title?></p>
-            </div>
             <div class="per_content">
                 <?=$texts?>
             </div>
@@ -83,8 +82,6 @@ require('./header.php');
                 }
                 ?>
             </div>
-        </div>
-    </div>
 </div>
     <div class="text-center">
         <button class="btn btn-default btn-block">查看更多</button>

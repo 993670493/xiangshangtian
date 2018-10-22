@@ -135,7 +135,7 @@ if($_SESSION['aid']){
 
                         </div>
                     </li>
-                    <li><a href="./fenxiang.php" class="nav_f">社区分享</a></li>
+                    <li><a href="./sharelist.php" class="nav_f">社区分享</a></li>
                     <?php
                     if($_SESSION['aid']) {
                         ?>

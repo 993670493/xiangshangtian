@@ -59,8 +59,22 @@ require('./header.php');
                     <div class="per_con3"><a href="./mycenter_pl.php" style="margin-left: 30px">吐槽点评</a></div>
                 </div>
             </div>
-            <div class="container" id="share_back">
+            <h4 class="text-center">我的分享</h4>
+            <div class="container sharelist_back">
+                <br>
+                <div class="row per_info5">
+                    <div class="col-4 list_left"><img src="images/1.jpg"></div>
+                    <div class="col-8 list_right">
 
+                        <div class="list_title">
+                            <a href="./fenxiang.php"><h4>标题</h4></a>
+                        </div>
+                        <div class="list_content">
+                            <p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
             </div>
         </div>
 </div>
