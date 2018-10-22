@@ -389,10 +389,13 @@ margin-left: 70px;
     font-weight: bold;
 }
 .del_share{
+    width: 16px;
+    height: 16px;
     margin-left: 700px;
+    background-image: url("../images/del.png");
 }
-.del_share a img:hover{
-    background-color:#80abdd;
+.del_share:hover{
+   background-image: url("../images/del1.png");
 }
 .per_one{
     width: 130px;
@@ -452,4 +455,30 @@ margin-left: 70px;
  font-size: 25px;
  color: white;
     font-weight: bold;
+}
+.share_return{
+    height: 20px;
+    width: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/ret.png");
+}
+ .share_return:hover{
+    background-image: url("../images/ret1.png");
+}
+ .comment_com a{
+     font-size: 14px;
+     color: darkgray;
+     text-decoration: none;
+ }
+ .comment_com a:hover{
+     color: #515151;
+ }
+ .comment_share a{
+     font-size: 16px;
+     color: darkgray;
+     text-decoration: none;
+ }
+.comment_share a:hover{
+    color: #515151;
 }
