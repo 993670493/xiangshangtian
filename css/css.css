@@ -429,11 +429,11 @@ margin-left: 70px;
     color: #02994a;
 }
 .list_content{
-    height: 100px;
+    height: 90px;
     line-height: 20px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 3;
     overflow: hidden;
     font-size: 16px;
     color: black;
@@ -456,6 +456,7 @@ margin-left: 70px;
  color: white;
     font-weight: bold;
 }
+
 .share_return{
     height: 20px;
     width: 20px;
@@ -482,3 +483,8 @@ margin-left: 70px;
 .comment_share a:hover{
     color: #515151;
 }
+
+.yingcang img{
+    display: none;
+}
+

@@ -1,6 +1,6 @@
 <?php
 require('./header.php');
-    $sql='select b.head,b.username,a.title,a.texts,a.addtime,a.fid from share as a,admin as b where a.aid=b.aid and a.status=1 ORDER by fid desc';
+    $sql='select b.head,b.username,a.title,a.texts,a.addtime,a.fid from share as a,admin as b where a.aid=b.aid and a.fid='.$_GET['fid'];
     $r = $mydb->query($sql);
     $stu = $r->fetch_array(MYSQLI_ASSOC);
     if($stu!=null){
