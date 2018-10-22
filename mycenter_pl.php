@@ -51,11 +51,13 @@ $students = $r->fetch_all(MYSQLI_ASSOC);
                                 <div class="media-body">
                                     <p class="media-heading">'.$username.'</p>
                                     <p>'.$stu['text'].'</p>
-                                    <a>'.$stu['addtime']. '发表</a>
+                                    <a>'.$stu['addtime'].'发表</a>
                                 </div>
                             </div>
                             <div class="del_share">
-                                <a href="#"><img src="images/del.png" data-pid="' .$stu['pid'].'" class="delete_pl"></a>
+                                <a href="#">
+                                   <div data-pid="'.$stu['pid'].'" class="delete_pl" style="height: 15px;width: 15px">
+                                </a>
                             </div>
                             <hr>
                         </div>

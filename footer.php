@@ -23,6 +23,7 @@
     </div>
 </div>
 </body>
+<script src="./houtaid/layui/layui.all.js"></script>
 <script src="bootstrap-4.1.2-dist/js/jquery-3.3.1.min.js"></script>
 <script src="bootstrap-4.1.2-dist/js/bootstrap.min.js"></script>
 <script>

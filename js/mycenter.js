@@ -40,10 +40,13 @@ function add_huifu() {
                 let data = JSON.parse(xhr.responseText);
                 console.log(data);
                 if (data.r == 'ok') {
-                    alert('回复成功');
-                    window.location.href = './fenxiang.php?fid='+fid;
+                    layer.confirm('回复成功', {
+                        btn: [ '刷新页面']
+                    }, function (index) {
+                        window.location.href = './fenxiang.php?fid='+fid;
+                    });
                 } else {
-                    alert('回复失败');
+                    alert('失败，请刷新后重新操作');
                 }
             }
         }
@@ -73,10 +76,13 @@ function add_pl() {
                 let data = JSON.parse(xhr.responseText);
                 console.log(data);
                 if (data.r == 'ok') {
-                    alert('评论成功');
-                    window.location.href = './fenxiang.php?fid='+fid;
+                    layer.confirm('评论成功', {
+                        btn: [ '刷新页面']
+                    }, function (index) {
+                        window.location.href = './fenxiang.php?fid='+fid;
+                    });
                 } else {
-                    alert('评论失败');
+                    alert('失败，请刷新后重新操作');
                 }
             }
         }
@@ -99,10 +105,13 @@ function add_fx() {
                 let data = JSON.parse(xhr.responseText);
                 console.log(data);
                 if (data.r == 'ok') {
-                    alert('分享成功');
-                    window.location.href = './sharelist.php';
+                    layer.confirm('分享成功', {
+                        btn: [ '回到个人中心首页']
+                    }, function (index) {
+                        window.location.href = './mycenterfirst.php';
+                    });
                 } else {
-                    alert('分享失败');
+                    alert('失败，请刷新后重新操作');
                 }
             }
         }
@@ -156,10 +165,13 @@ function updatemm() {
                     document.querySelector('.utip').classList.add('H');
                 }
                 if (data.r == 'ok') {
-                    alert('修改成功');
-                    window.location.href = './mycenter.php';
+                    layer.confirm('修改成功', {
+                        btn: [ '回到个人中心首页']
+                    }, function (index) {
+                        window.location.href = './mycenterfirst.php';
+                    });
                 } else {
-                    alert('失败，请重新修改');
+                    alert('失败，请刷新后重新操作');
                 }
             }
         }
@@ -251,10 +263,13 @@ function updateuser() {
                 let data = JSON.parse(xhr.responseText);
                 console.log(data);
                 if (data.r == 'ok') {
-                    alert('保存成功');
-                    window.location.href = './mycenterfirst.php';
+                    layer.confirm('保存成功', {
+                        btn: [ '回到个人中心首页']
+                    }, function (index) {
+                        window.location.href = './mycenterfirst.php';
+                    });
                 } else {
-                    alert('失败，请重新修改');
+                    alert('失败，请刷新后重新操作');
                 }
             }
         }

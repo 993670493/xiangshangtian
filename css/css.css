@@ -487,4 +487,24 @@ margin-left: 70px;
 .yingcang img{
     display: none;
 }
+.huifu_yangshi,.pinglun_css{
+    background-color: inherit;
+    color: #cccccc;
+    border: none;
+}
+.huifu_yangshi:hover,.pinglun_css:hover{
+    background-color: inherit;
+    color: black;
+    border: none;
+}
+.huifu_yangshi:active,.pinglun_css:active{
+    background-color: inherit;
+    color: black;
+    border: none;
+}
+.huifu_yangshi:visited,.pinglun_css:visited{
+    background-color: inherit;
+    color: black;
+    border: none;
+}
 

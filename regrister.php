@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>注册</title>
+    <link rel="stylesheet" href="./houtaid/layui/css/layui.css">
     <link rel="icon" href="./images/logo.png">
     <link rel="stylesheet" href="./bootstrap-4.1.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/css.css">
@@ -54,6 +55,7 @@
         </form>
     </div>
 </div>
+<script src="./houtaid/layui/layui.all.js"></script>
 <script src="./bootstrap-4.1.2-dist/js/jquery-3.3.1.min.js"></script>
 <script src="./bootstrap-4.1.2-dist/js/bootstrap.min.js"></script>
 <script src="js/regrister.js"></script>

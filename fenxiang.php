@@ -45,7 +45,12 @@ require('./header.php');
                 <div class='share_time'><?=$addtime?></div>
                 <input type="hidden" name="aid" value="<?= $aid ?>">
                 <input type="hidden" name="fid" value="<?= $fid ?>">
-                <div class='comment_share'><button class='btn btn-success ' data-toggle='modal' data-target='#myModal' >评论</button>
+                    <a href="./sharelist.php">
+                        <div class="share_return">
+                        </div>
+                    </a>
+                <div class='comment_share'>
+                    <button class=' pinglun_css' data-toggle='modal' data-target='#myModal' >评论</button>
                 </div>
             </div>
             <div id="allcom">
@@ -64,7 +69,8 @@ require('./header.php');
                         <a>'.$stu['addtime'].'发表</a>
                         <input type="hidden" name="last_aid" value="'.$stu['aid'].'">
                 <input type="hidden" name="pid" value="'.$stu['pid'].'">
-                <button class="btn btn-success  replay comment_com" data-aid="'.$stu['aid'].'" data-pid="'.$stu['pid'].'" type="button" data-toggle=\'modal\' data-target=\'#mM\' >回复</button>
+                <br>
+                <button class=" replay comment_com huifu_yangshi" data-aid="'.$stu['aid'].'" data-pid="'.$stu['pid'].'" type="button" data-toggle=\'modal\' data-target=\'#mM\' >回复</button>
                     </div>
                 </div>
                     ';

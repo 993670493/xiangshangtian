@@ -14,6 +14,7 @@ if($_SESSION['aid']){
 <head>
     <meta charset="UTF-8">
     <title>一起去黄山旅游网</title>
+    <link rel="stylesheet" href="./houtaid/layui/css/layui.css">
     <link rel="icon" href="./images/logo.png">
     <link rel="stylesheet" href="bootstrap-4.1.2-dist/css/bootstrap.min.css">
     <meta name=“viewport” content=“width=device-width,initial-scale=1,shrink-to-fit=no">

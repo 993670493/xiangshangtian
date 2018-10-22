@@ -51,10 +51,13 @@ function regrister() {
                     document.querySelector('.utip').classList.add('panduan2');
                 }
                 if (data.r == 'ok') {
-                    alert('注册成功');
-                    window.location.href = './login.php';
+                    layer.confirm('注册成功', {
+                        btn: [ '回到登录界面']
+                    }, function (index) {
+                        window.location.href = './login.php';
+                    });
                 } else {
-                    alert('失败，请刷新后重新注册');
+                    alert('失败，请刷新后重新操作');
                 }
             }
         }

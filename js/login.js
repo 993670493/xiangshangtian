@@ -18,9 +18,12 @@ window.onload=function () {
                     document.querySelector('.ptip').innerHTML='密码不正确';
                     document.querySelector('.ptip').classList.add('er');
                 }
-                if(data.r=='ok'){
-                    alert('登录成功！');
-                    window.location.href = './index.php';
+                if (data.r == 'ok') {
+                    layer.confirm('登录成功', {
+                        btn: [ '前往主页面']
+                    }, function (index) {
+                        window.location.href = './index.php';
+                    });
                 }
             }
         }
