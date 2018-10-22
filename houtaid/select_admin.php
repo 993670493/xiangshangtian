@@ -19,8 +19,8 @@ $students = $r->fetch_all(MYSQLI_ASSOC);
             <tr>
                 <th>ID</th>
                 <th>用户名</th>
-                <th>姓名</th>
                 <th>头像</th>
+                <th>姓名</th>
                 <th>手机号</th>
                 <th>性别</th>
                 <th>操作</th>

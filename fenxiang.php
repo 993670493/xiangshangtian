@@ -1,17 +1,20 @@
 <?php
 require('./header.php');
-    $sql='select b.head,b.username,a.title,a.texts,a.addtime,a.fid from share as a,admin as b where a.aid=b.aid ORDER by fid desc';
+    $sql='select b.head,b.username,a.title,a.texts,a.addtime,a.fid from share as a,admin as b where a.aid=b.aid and a.status=1 ORDER by fid desc';
     $r = $mydb->query($sql);
     $stu = $r->fetch_array(MYSQLI_ASSOC);
-    foreach ($stu as $key => $value) {
-        $$key = $value;
+    if($stu!=null){
+        foreach ($stu as $key => $value) {
+            $$key = $value;
+        }
     }
-    $sql_fx='select d.head,f.text,d.username,f.addtime,f.pid,f.aid from comment as f,admin as d where f.aid=d.aid and f.fid="'.$fid.'"  ORDER by addtime desc';
+
+    $sql_fx='select d.head,f.text,d.username,f.addtime,f.pid,f.aid from comment as f,admin as d where f.aid=d.aid and f.fid="'.$fid.'" and f.status=1 ORDER by addtime desc';
     $gsd=$mydb->query($sql_fx);
     $stu_fx=$gsd->fetch_all(MYSQLI_ASSOC);
     foreach ($stu_fx as $k =>$v){
         $pid=$v['pid'];
-        $sql_fx='select d.head,f.text_hf,d.username,f.addtime from reply as f,admin as d where f.aid=d.aid and f.pid='.$pid;
+        $sql_fx='select d.head,f.text_hf,d.username,f.addtime from reply as f,admin as d where f.aid=d.aid and f.status=1 and f.pid='.$pid;
         $gsd=$mydb->query($sql_fx);
         $stu_fx[$k]['replay']=$gsd->fetch_all(MYSQLI_ASSOC);
     }

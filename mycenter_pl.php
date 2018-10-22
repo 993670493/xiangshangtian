@@ -1,6 +1,8 @@
 <?php
 require('./header.php');
-
+$sql = 'SELECT * FROM comment WHERE status = 1 and aid="'.$_SESSION['aid'].'"';
+$r = $mydb->query($sql);
+$students = $r->fetch_all(MYSQLI_ASSOC);
 ?>
     <div id="background_img">
         <div class="container">
@@ -36,29 +38,36 @@ require('./header.php');
                 <div class="border_line"></div>
                 <br>
                 <div class="row my_info2">
-                    <div style="margin-bottom: 500px">
-                        <div>
+                    <div class="classlest" style="margin-bottom: 500px">
+                        <?php
+                        foreach ($students as $k =>$stu){
+                            echo '
+                            <div>
                             <br>
                             <div class="media">
                                 <div class="media-left">
-                                    <img class="media-object" src="images/1.jpg" alt="...">
+                                    <img class="media-object" src="'.$head.'" alt="...">
                                 </div>
                                 <div class="media-body">
-                                    <p class="media-heading">小明</p>
-                                    <p>有来过，666666。</p>
-                                    <a>4楼&nbsp;&nbsp;2017-08-08&nbsp;&nbsp;23:15发表</a>
+                                    <p class="media-heading">'.$username.'</p>
+                                    <p>'.$stu['text'].'</p>
+                                    <a>'.$stu['addtime'].'发表</a>
                                 </div>
                             </div>
-                            <div class='del_share'>
-                                <a href="#"><img src="images/删除.png"></a>
+                            <div class="del_share">
+                                <a href="#"><img src="images/删除.png" data-pid="'.$stu['pid'].'" class="delete_pl"></a>
                             </div>
                             <hr>
                         </div>
+                            ';
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="./js/delete_pl.js"></script>
 <?php
 require('./footer.php');
 ?>

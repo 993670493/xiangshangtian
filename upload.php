@@ -6,7 +6,7 @@ foreach ($_FILES["images"]["tmp_name"] as $k => $tmp) {
     $filename = './new_image/'. uniqid('img_') . '.' . $ext;
     move_uploaded_file($tmp, $filename);
     //把图片地址追加到数组里面去
-    array_push($imglist['data'], $filename);
+    array_push($imglist['data'], 'http://localhost/xiangmu'.$filename);
 }
 echo json_encode($imglist);
 

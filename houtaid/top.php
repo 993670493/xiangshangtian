@@ -15,6 +15,7 @@ if($_SESSION['aid']){
     <meta charset="UTF-8">
     <title>后台主界面</title>
     <link rel="stylesheet" href="./layui/css/layui.css">
+    <link rel="stylesheet" href="./css/css.css">
 </head>
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
