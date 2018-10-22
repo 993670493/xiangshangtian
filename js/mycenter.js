@@ -99,7 +99,7 @@ function add_fx() {
                 console.log(data);
                 if (data.r == 'ok') {
                     alert('分享成功');
-                    window.location.href = './fenxiang.php';
+                    window.location.href = './sharelist.php';
                 } else {
                     alert('分享失败');
                 }
