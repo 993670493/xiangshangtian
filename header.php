@@ -133,7 +133,6 @@ if($_SESSION['aid']){
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </li>
                     <li><a href="./sharelist.php" class="nav_f">社区分享</a></li>
@@ -144,7 +143,7 @@ if($_SESSION['aid']){
                         <?php
                     }else {
                         ?>
-                        <li><a href="./login.php" class="nav_f">个人中心</a></li>
+                        <li><a href="#" class="nav_f loginmycenter">个人中心</a></li>
                         <?php
                     }
                     ?>
@@ -153,3 +152,4 @@ if($_SESSION['aid']){
         </div>
     </div>
 </div>
+<script src="./js/loginmycenter.js"></script>

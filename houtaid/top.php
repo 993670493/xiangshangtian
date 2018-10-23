@@ -8,6 +8,9 @@ if($_SESSION['aid']){
         $$key = $value;
     }
 }
+if($_SESSION['important']!=1){
+    header('Location:./login.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

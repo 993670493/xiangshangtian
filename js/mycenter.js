@@ -53,6 +53,16 @@ function add_huifu() {
     }
 }
 function add_pl() {
+    let pinglun_pd = document.querySelector('.pinglun_pd');
+    if(!pinglun_pd) return ;
+    pinglun_pd.onclick=function () {
+        let aid=document.querySelector('input[name="aid"]').value;
+        if(aid==""){
+            alert("请登录");
+            window.location.href = './login.php';
+            return;
+        }
+    };
     let add_pl = document.querySelector('.add_pl');
     if(!add_pl) return ;
     add_pl.onclick=function () {

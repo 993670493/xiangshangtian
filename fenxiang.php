@@ -50,7 +50,7 @@ require('./header.php');
                         </div>
                     </a>
                 <div class='comment_share'>
-                    <button class=' pinglun_css' data-toggle='modal' data-target='#myModal' >评论</button>
+                    <button class=' pinglun_css pinglun_pd' data-toggle='modal' data-target='#myModal' >评论</button>
                 </div>
             </div>
             <div id="allcom">
