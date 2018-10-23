@@ -53,7 +53,7 @@
                                 <div class="ptip" style="margin-left: -40px">*密码必填</div>
                                 <div class="form-group col-12">
                                     <button class="btn btn-success login" type="button" >登录</button>
-                                    <button class="btn btn-success"><a href="./regrister.php">注册</a></button>
+                                    <button class="btn btn-success"><a href="./regrister.php" style="color:white;">注册</a></button>
                                 </div>
                             </div>
                         </form>

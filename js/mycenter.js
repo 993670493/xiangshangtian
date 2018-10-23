@@ -104,7 +104,7 @@ function add_fx() {
     add_fx.onclick=function () {
         let data='';
         data += '&title=' + document.querySelector('input[name="title"]').value;
-        data += '&text=' + document.querySelector('#text').value;
+        data += '&text=' + encodeURIComponent(document.querySelector('#text').value);
         data += '&head=' + document.querySelector('input[name="head"]').value;
         let xhr = new XMLHttpRequest();
         xhr.open('POST', './add_fx.php');
