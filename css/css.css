@@ -149,6 +149,12 @@
     position: absolute;
     height: 167%;
 }
+.back_img6 img{
+    width: 84%;
+    opacity: 0.3;
+    position: absolute;
+    height: 105%;
+}
 .strategy h3{
     margin-left: 500px;
 }

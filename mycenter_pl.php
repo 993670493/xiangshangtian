@@ -46,7 +46,7 @@ $students = $r->fetch_all(MYSQLI_ASSOC);
                             <br>
                             <div class="media">
                                 <div class="media-left">
-                                    <img class="media-object" src="'.$head.'" alt="...">
+                                    <img class="media-object" src="'.($head?$head:'./images/1.jpg').'" alt="...">
                                 </div>
                                 <div class="media-body">
                                     <p class="media-heading">'.$username.'</p>
@@ -54,16 +54,18 @@ $students = $r->fetch_all(MYSQLI_ASSOC);
                                     <a>'.$stu['addtime'].'发表</a>
                                 </div>
                             </div>
-                            <div class="del_share">
+                            <div class="del_share" title="删除评论">
                                 <a href="#">
                                    <div data-pid="'.$stu['pid'].'" class="delete_pl" style="height: 15px;width: 15px">
                                 </a>
                             </div>
-                            <hr>
+
+                            
                         </div>
                             ';
                         }
                         ?>
+                        <hr>
                     </div>
                 </div>
             </div>

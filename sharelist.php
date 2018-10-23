@@ -18,7 +18,7 @@ $students = $r->fetch_all(MYSQLI_ASSOC);
                 echo '
             <br>
     <div class="row per_info5">
-        <div class="col-4 list_left"><img src="' . $stu['head'] . '"></div>
+        <div class="col-4 list_left"><img src="'. ($stu['head']?$stu['head']:'./images/1.jpg').'"></div>
         <div class="col-8 list_right">
             <div class="list_title">
                 <a href="./fenxiang.php?fid=' . $stu['fid'] . '"><h4>' . $stu['title'] . '</h4></a>

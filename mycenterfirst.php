@@ -71,7 +71,7 @@ $students = $r->fetch_all(MYSQLI_ASSOC);
                     echo '
                    <br>
                    <div class="row per_info5">
-                     <div class="col-4 list_left"><img src="' . $stu['head'] . '"></div>
+                     <div class="col-4 list_left"><img src="'. ($stu['head']?$stu['head']:'./images/1.jpg').'"></div>
                       <div class="col-8 list_right">
                         <div class="list_title">
                            <a href="./fenxiang.php?fid=' . $stu['fid'] . '"><h4>' . $stu['title'] . '</h4></a>
@@ -80,7 +80,7 @@ $students = $r->fetch_all(MYSQLI_ASSOC);
                            <p>' . $stu['texts'] . '</p>
                         </div>
                       </div>
-                    <div class="del_share">
+                    <div class="del_share" title="删除分享">
                         <a href="#">
                         <div data-fid="'.$stu['fid'].'" class="delete_share" style="height: 15px;width: 15px"></div>
                         </a>

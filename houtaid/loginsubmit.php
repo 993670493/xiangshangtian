@@ -5,7 +5,7 @@ require './common/mysql.php';
 $username = $_POST['username'];
 $passwd = $_POST['passwd'];
 
-$sql = 'SELECT aid, username, passwd FROM admin WHERE  important=1 AND username = "'.$username.'" LIMIT 1';
+$sql = 'SELECT aid, username, passwd ,important FROM admin WHERE  important=1 AND username = "'.$username.'" LIMIT 1';
 $r = $mydb->query($sql);
 $admin = $r->fetch_array(MYSQLI_ASSOC);
 //判断账号是否存在
@@ -27,5 +27,5 @@ $mydb->query($sql);
 //记录登录状态
 $_SESSION['aid'] = $admin['aid'];
 $_SESSION['username'] = $admin['username'];
-
+$_SESSION['important'] = $admin['important'];
 echo json_encode(['r'=>'ok']);

@@ -13,7 +13,7 @@
             <a href="#">联系我们</a>
         </div>
         <div class="col-1">
-            <a href="#">友情链接</a>
+            <a href="http://www.mafengwo.cn/i/9389665.html">友情链接</a>
         </div>
     </div>
     <div class="row">

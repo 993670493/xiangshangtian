@@ -17,6 +17,8 @@ window.onload=function () {
                 if(data.r=='passwd_err'){
                     document.querySelector('.ptip').innerHTML='密码不正确';
                     document.querySelector('.ptip').classList.add('er');
+                    document.querySelector('.utip').classList.remove('er');
+
                 }
                 if(data.r=='ok'){
                     window.location.href = './index.php';

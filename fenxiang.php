@@ -46,7 +46,7 @@ require('./header.php');
                 <input type="hidden" name="aid" value="<?= $aid ?>">
                 <input type="hidden" name="fid" value="<?= $fid ?>">
                     <a href="./sharelist.php">
-                        <div class="share_return">
+                        <div class="share_return" title="返回上一级">
                         </div>
                     </a>
                 <div class='comment_share'>
@@ -61,7 +61,7 @@ require('./header.php');
                 <br>
                 <div class="media">
                     <div class="media-left">
-                        <img class="media-object" src="'.$stu['head'].'" alt="">
+                        <img class="media-object" src="'. ($stu['head']?$stu['head']:'./images/1.jpg').'" alt="">
                     </div>
                     <div class="media-body">
                         <h4 class="media-heading">'.$stu['username'].'</h4>
